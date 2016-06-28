@@ -47,6 +47,3 @@ export HISTSIZE=1000000
 #set -o vi
 
 archey
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
