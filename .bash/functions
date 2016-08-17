@@ -182,3 +182,17 @@ ssh_test_key() {
     local identifier=$1
     ssh -o PasswordAuthentication=no $identifier true && { tput setaf 2; echo 'Success!'; } || { tput setaf 1; echo 'Failure'; }; tput sgr0
 }
+
+
+#
+# Put Tim Pope's sensible vimrc on a ssh-identified server.
+#
+ssh_install_default_vimrc() {
+    local identifier=$1
+    if [[ "$identifier" == "" ]]
+    then
+        echo "usage: ssh_install_default_vimrc <identifier>"
+    else
+        ssh $identifier 'curl https://raw.githubusercontent.com/tpope/vim-sensible/master/plugin/sensible.vim > ~/.vimrc'
+    fi
+}
