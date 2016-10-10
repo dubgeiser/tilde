@@ -30,7 +30,7 @@ prompt_virtual_env() {
         echo " (\[${RED}\]`basename \"$VIRTUAL_ENV\"`\[${NORMAL}\])"
     fi
 }
-PROMPT_COMMAND='__git_ps1 "\[${REVERSE}\]\[${BLUE}\] \t \[${NORMAL}\] \u@\h \[${BLUE}\]\W\[${NORMAL}\]" "$(prompt_virtual_env)\n$ "'
+PROMPT_COMMAND='__git_ps1 " \[${REVERSE}\]\[${BLUE}\] \t \[${NORMAL}\] \u@\h \[${BLUE}\]\W\[${NORMAL}\]" "\n"'
 
 
 # Path and environment vars.
