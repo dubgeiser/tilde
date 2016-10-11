@@ -18,30 +18,6 @@ cdf() {
 
 
 #
-# Change to a project directory
-#
-cdp() {
-    local project=$1
-    if [[ "$project" == "" ]]
-    then
-        echo "usage: cdp <project>"
-        return 1
-    fi
-
-    if [ -d ~/Projects/$project ]; then
-        path=~/Projects/$project
-    elif [ -d ~/Sites/$project ]; then
-        path=~/Sites/$project
-    else
-        echo "$project not found, exiting (TODO: offer to create it?)"
-        return 1
-    fi
-
-    cd $path
-}
-
-
-#
 # Attach to an existing tmux session, create the session if it doesn't exist.
 #
 dev() {
