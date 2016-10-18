@@ -34,7 +34,7 @@ PROMPT_COMMAND='__git_ps1 " \[${REVERSE}\]\[${BLUE}\] \t \[${NORMAL}\] \u@\h \[$
 
 
 # Path and environment vars.
-PATH="/usr/local/php5/bin:~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+PATH="/usr/local/php5/bin:~/bin:~/.composer/vendor/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
 export EDITOR=~/bin/vim
 export GIT_EDITOR="$EDITOR"
 
