@@ -23,6 +23,7 @@ hipchatrooms.html
 /.config/
 /.dropbox/
 /.dropbox-master/
+/.drush/
 /.filezilla/
 /.gem/
 /.gist-vim
@@ -78,3 +79,4 @@ hipchatrooms.html
 /Virtual Box Images/
 /VirtualBox VMs/
 
+/bin/drush
