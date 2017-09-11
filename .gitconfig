@@ -19,7 +19,7 @@
     co = checkout
     d = diff
     dc = diff --cached
-    info = "!git remote -v && git branch -a"
+    info = "!echo && git remote -v && echo && git branch -a"
     l = "!echo && (git --no-pager log -15 --pretty=shortnsweet) && echo"
     ll = log --pretty=shortnsweet --graph
     lostcommits = "!git fsck | grep commit | cut -d' ' -f3 | while read hash; do git rev-parse --verify --quiet $hash^2 && echo $hash; done | xargs git show"
