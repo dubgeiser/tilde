@@ -16,7 +16,7 @@ alias dirs='dirs -v'
 alias schanges="svn st | grep \"^[A|M]\""
 alias snew="svn st | grep \"^?\""
 
-alias remove_cache='cd tools/ && ./remove_cache && cd ..'
+alias drccall='cd www/ && drush cc all && cd ..'
 
 # TODO make alias 'fame' in .gitconfig when '\.php' matching is not hardcoded.
 alias gfame='git  ls-tree -r HEAD | cut -f 2 | grep -E '\.php$' | xargs -n1 git blame --line-porcelain | grep "^author " | sort | uniq -c | sort -nr | sed  "s/ author//"'
