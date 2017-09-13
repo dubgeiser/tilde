@@ -100,18 +100,6 @@ imgur() {
 
 
 #
-# Execute vagrant commands in the sneakers directory
-# Because we don't want to symlink the vagrantfile in every project and we don't
-# want to go wandering away from our project root directory.
-#
-sneakers() {
-    cd ~/Projects/sneakers
-    vagrant $*
-    cd - > /dev/null
-}
-
-
-#
 # Create an SSH config host entry and add my public key to that host.
 #
 # @param The identifier to use for this SSH host configuration.
