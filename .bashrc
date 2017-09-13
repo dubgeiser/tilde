@@ -9,7 +9,8 @@ source /usr/local/etc/bash_completion.d/tmux
 source /usr/local/etc/bash_completion.d/t-completion.sh
 
 # Enable autocomplete for aliases
-complete -o default -o nospace -F _git g
+# Leaving it here for documentation purposes
+#complete -o default -o nospace -F _git g
 
 ssh_load_autocomplete
 
