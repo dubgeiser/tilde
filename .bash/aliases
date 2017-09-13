@@ -1,7 +1,6 @@
 #!/bin/bash
 
 alias c=./app/console
-alias cap2='ruby -S cap _2.15.5_'
 alias e=mvim
 alias g=git
 alias o=open
