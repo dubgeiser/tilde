@@ -15,7 +15,6 @@
     aa = add --all
     amend = commit --amend
     au = add --update
-    ci = commit
     co = checkout
     d = diff
     dc = diff --cached
