@@ -80,36 +80,6 @@ tmux_create_dev_session() {
 
 
 #
-# Start a new fork project in the current directory.
-# @param string github url
-# @param string branch of the fork repo to use.
-#
-fork_start() {
-    local giturl=$1
-    local forkbranch=$2
-
-    if [[ "$giturl" == "" ]] || [[ "$forkbranch" == "" ]]
-    then
-        echo "usage: fork_start <giturl> <forkbranch>"
-    else
-        # first awk gets the 'projectname.git' part, second awk 'projectname'
-        project=$(echo $giturl | awk -F"/" '{print $NF}' | awk -F"." '{print $1}')
-        if [[ "$project" == "" ]]
-        then
-            echo "Could not get the project name from $giturl... exiting"
-            return 1;
-        else
-            git clone $giturl
-            cd $project
-            git remote add upstream git://github.com/forkcms/forkcms.git
-            git pull upstream $forkbranch
-            git push origin master
-        fi
-    fi
-}
-
-
-#
 # Upload a screenshot to imgur "on the fly":
 # Let user select region, take screenshot
 # Upload screenshot to imgur.com
