@@ -7,9 +7,6 @@ alias pu='pushd $(pwd)'
 alias po='popd'
 alias dirs='dirs -v'
 
-alias schanges="svn st | grep \"^[A|M]\""
-alias snew="svn st | grep \"^?\""
-
 alias drccall='cd www/ && drush cc all && cd ..'
 
 # TODO make alias 'fame' in .gitconfig when '\.php' matching is not hardcoded.
