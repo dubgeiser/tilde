@@ -1,7 +1,5 @@
 #!/bin/bash
 
-alias c=./app/console
-
 alias ls='ls -GF'
 alias ll='ls -hlGFa'
 
