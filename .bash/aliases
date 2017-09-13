@@ -1,7 +1,6 @@
 #!/bin/bash
 
 alias c=./app/console
-alias e=mvim
 alias g=git
 alias o=open
 
