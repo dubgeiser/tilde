@@ -17,6 +17,12 @@
 # No trailing slash!
 DIR_PROJECTS=~/Projects
 
+# Where are the websites?
+# This is most likely Apache's VirtualDocumentRoot.
+# No trailing slash!
+DIR_SITES=~/Sites
+
+
 #
 # cd to the directory the Finder is in.
 # By @sindresorhus taken from:
@@ -65,10 +71,10 @@ tmux_create_dev_session() {
     pushd `pwd`
     local project=$1
 
-    if [ -d ~/Projects/$project ]; then
-        path=~/Projects/$project
-    elif [ -d ~/Sites/$project ]; then
-        path=~/Sites/$project
+    if [ -d $DIR_PROJECTS/$project ]; then
+        path=$DIR_PROJECTS/$project
+    elif [ -d $DIR_SITES/$project ]; then
+        path=$DIR_SITES/$project
     else
         echo "$project not found, exiting (TODO: offer to create it?)"
         return 1
