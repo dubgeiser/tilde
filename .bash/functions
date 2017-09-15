@@ -7,6 +7,16 @@
 # Gary Bernhardt, Jan Moesen, Dave Lens, or some other dude(tte) on the web.
 #
 
+
+#
+# Shared variables
+# Keep these to a minimum!
+#
+
+# Where are projects checked out?
+# No trailing slash!
+DIR_PROJECTS=~/Projects
+
 #
 # cd to the directory the Finder is in.
 # By @sindresorhus taken from:
@@ -153,4 +163,12 @@ ssh_install_default_vimrc() {
     else
         ssh $identifier 'curl https://raw.githubusercontent.com/tpope/vim-sensible/master/plugin/sensible.vim > ~/.vimrc'
     fi
+}
+
+#
+# Given part of a repository name of a project, go to that project directory.
+#
+prj() {
+    local project_name_part=$1
+    cd $DIR_PROJECTS/*$project_name_part*
 }
