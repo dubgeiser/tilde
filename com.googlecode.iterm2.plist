@@ -12,6 +12,8 @@
 	<integer>1</integer>
 	<key>Default Bookmark Guid</key>
 	<string>D29FBA2B-8E7E-493B-B245-91245AE325D6</string>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
@@ -54,12 +56,14 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>416 523 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>212 373 918 512 0 0 1680 1027 </string>
+	<string>660 437 918 381 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>841 8 838 1015 0 0 1680 1027 </string>
+	<string>4 4 730 502 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>3 521 730 502 0 0 1680 1027 </string>
+	<string>0 0 1680 1050 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>233 78 730 502 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
@@ -702,7 +706,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>0FD71A00-9C5F-4FBA-9315-BBC260D02A52</string>
 	<key>NoSyncLastTipTime</key>
-	<real>527072685.127554</real>
+	<real>527498518.06601298</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -723,6 +727,10 @@
 		<string>0006</string>
 		<string>0007</string>
 		<string>0008</string>
+		<string>0009</string>
+		<string>0010</string>
+		<string>0011</string>
+		<string>0012</string>
 	</array>
 	<key>OpenArrangementAtStartup</key>
 	<false/>
@@ -776,7 +784,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-09-11T08:31:41Z</date>
+	<date>2017-09-20T07:10:40Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>TabStyle</key>
@@ -786,6 +794,6 @@
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>3.0.15</string>
+	<string>3.1.1</string>
 </dict>
 </plist>
