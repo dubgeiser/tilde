@@ -2,12 +2,9 @@
 .swp
 .DS_Store
 *.pyc
-tmp/
-svn-users.txt
 .gitconfig-user
 soapui-settings.xml
 default-soapui-workspace.xml
-hipchatrooms.html
 
 /.CFUserTextEncoding
 /.Trash/
@@ -21,8 +18,9 @@ hipchatrooms.html
 /.cache/
 /.composer/
 /.config/
-/.dropbox/
+/.cups/
 /.dropbox-master/
+/.dropbox/
 /.drush/
 /.filezilla/
 /.gem/
@@ -39,27 +37,26 @@ hipchatrooms.html
 /.netrc
 /.node-gyp
 /.node_repl_history
-/.npm
 /.notes
+/.npm
 /.oracle_jre_usage
 /.pdepend
 /.pearrc
 /.php_history
+/.pow
 /.psql_history
+/.slocdata/
 /.sonar/
 /.sqlite_history
 /.ssh/
 /.subversion/
+/.trc
+/.v8flags.*.json
+/.vagrant.d/
 /.vim/
 /.viminfo
 /.vimrc
 /.wget-hsts
-/.cups/
-/.slocdata/
-/.trc
-/.pow
-/.v8flags.*.json
-/.vagrant.d/
 /.wireshark
 /.wireshark-etc
 
@@ -75,8 +72,8 @@ hipchatrooms.html
 /Projects/
 /Public/
 /Sites/
-/etc/
 /Virtual Box Images/
 /VirtualBox VMs/
 
 /bin/drush
+/etc/
