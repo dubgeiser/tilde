@@ -722,7 +722,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>0FD71A00-9C5F-4FBA-9315-BBC260D02A52</string>
 	<key>NoSyncLastTipTime</key>
-	<real>528280932.90670699</real>
+	<real>528368890.96591997</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -754,6 +754,7 @@
 		<string>0017</string>
 		<string>0018</string>
 		<string>0019</string>
+		<string>0020</string>
 	</array>
 	<key>OpenArrangementAtStartup</key>
 	<false/>
@@ -809,19 +810,18 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-09-28T07:05:32Z</date>
+	<date>2017-09-28T10:38:55Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>TabStyle</key>
 	<integer>0</integer>
 	<key>TmuxDashboardLimit</key>
-	<integer>1</integer>
+	<integer>10</integer>
 	<key>ToolbeltTools</key>
 	<array>
 		<string>Recent Directories</string>
 		<string>Paste History</string>
 		<string>Notes</string>
-		<string>Command History</string>
 		<string>Jobs</string>
 	</array>
 	<key>UseLionStyleFullscreen</key>
