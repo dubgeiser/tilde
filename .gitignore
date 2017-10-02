@@ -34,6 +34,7 @@ default-soapui-workspace.xml
 /.irssi
 /.lesshst
 /.local/
+/.locks/
 /.mysql_history
 /.netrc
 /.node-gyp
