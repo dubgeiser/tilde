@@ -1,4 +1,0 @@
-#!/bin/bash
-
-# Naive, but "good enough".
-cat ~/hipchatrooms.html | ack '\/rooms\/show\/([0-9]+)' | sed 's/<a href="\/rooms\/show\///' | sed 's/<\/a>//' | sed 's/" class="clean">/ /'

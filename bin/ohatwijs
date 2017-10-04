@@ -1,6 +1,0 @@
-#!/bin/bash
-
-echo -e
-quote=$1
-echo "$quote" | hipchat_room_message -r 210213 -c purple -f "#OHatWijs"
-
