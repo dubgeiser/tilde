@@ -24,13 +24,6 @@ GIT_PS1_SHOWCOLORHINTS=1
 # Thanks @janmoesen for pointing me to the \[\] surrounding the non-printing
 # chars.  These are necessary to prevent issues with command line editing,
 # -browsing, -completion.
-# Added the virtual environment, because sourcing the virtualenv activate code
-# did not work for me (__git_ps1() ignores this)
-prompt_virtual_env() {
-    if test -n "$VIRTUAL_ENV" ; then
-        echo " (\[${RED}\]`basename \"$VIRTUAL_ENV\"`\[${NORMAL}\])"
-    fi
-}
 PROMPT_COMMAND='__git_ps1 " \[${REVERSE}\]\[${BLUE}\] \t \[${NORMAL}\] \u@\h \[${BLUE}\]\W\[${NORMAL}\]" "\n"'
 
 
