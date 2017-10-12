@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-# AWS ls a bucket with the files only
-
-bucket=$1
-
-aws ls $bucket | cut -d '|' -f7,7 | egrep -v '\-\-\-\-\-|Key' | sed 's/ //' | egrep -v '^\s+$' | sort
