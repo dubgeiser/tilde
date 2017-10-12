@@ -39,7 +39,6 @@ default-soapui-workspace.xml
 /.netrc
 /.node-gyp
 /.node_repl_history
-/.notes
 /.npm
 /.oracle_jre_usage
 /.pdepend
