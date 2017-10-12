@@ -1,4 +1,0 @@
-
-bind "^U"    vi-kill-line-prev
-bind "^W"    ed-delete-prev-word
-
