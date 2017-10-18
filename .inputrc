@@ -9,3 +9,6 @@ set convert-meta off
 # No bell, no flash
 set bell-style none
 
+# Immediately add trailing slash when auto-completing symlinks that point to
+# a directory.
+set mark-symlinked-directories on
