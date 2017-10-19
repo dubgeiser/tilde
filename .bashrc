@@ -46,7 +46,4 @@ export HISTCONTROL=erasedups
 export HISTFILESIZE=10000000
 export HISTSIZE=1000000
 
-# Vi mode
-#set -o vi
-
 archey
