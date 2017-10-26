@@ -32,6 +32,8 @@ default-soapui-workspace.xml
 /.heroku
 /.irb_history
 /.irssi
+/.iterm2
+/.iterm2_shell_integration.bash
 /.lesshst
 /.local/
 /.locks/
