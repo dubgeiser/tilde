@@ -13,8 +13,7 @@ set bell-style none
 # a directory.
 set mark-symlinked-directories on
 
-# Vi mode
-#set -o vi
+# set editing-mode vi
 
 
 # More:
