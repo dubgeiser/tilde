@@ -7,6 +7,10 @@ set output-meta on
 set convert-meta off
 
 # No bell, no flash
+# (none, visible, audible)
+# Note: when set to "visible", readline will _attempt_ to use a visible bell...
+#       This didn't seem to work on my machine (audible does, but that's too
+#       much)
 set bell-style none
 
 # Immediately add trailing slash when auto-completing symlinks that point to
@@ -16,6 +20,6 @@ set mark-symlinked-directories on
 # set editing-mode vi
 
 
-# More:
 # https://www.gnu.org/software/bash/manual/html_node/Readline-Init-File-Syntax.html#Readline-Init-File-Syntax
 # https://www.ukuug.org/events/linux2003/papers/bash_tips/
+# O'Reilly "Learning the bash shell"
