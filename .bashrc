@@ -13,6 +13,7 @@ if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
 fi
 [[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.bash" 2> /dev/null
 source "/usr/local/opt/fzf/shell/key-bindings.bash"
+export FZF_DEFAULT_OPTS='--color=light'
 
 # Enable autocomplete for aliases
 # Leaving it here for documentation purposes
