@@ -6,7 +6,6 @@ source ~/.bash/aliases
 source /usr/local/etc/bash_completion.d/git-completion.bash
 source /usr/local/etc/bash_completion.d/git-prompt.sh
 source /usr/local/etc/bash_completion.d/tmux
-#source /usr/local/etc/bash_completion.d/t-completion.sh
 
 # fzf
 if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
