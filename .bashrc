@@ -2,11 +2,11 @@
 # .bash_profile will source this .bashrc
 #
 
-source ~/.bash/colors
-source ~/.bash/functions
-source ~/.bash/aliases
-source ~/.bash/completions
-source ~/.bash/prompt
+. ~/.bash/colors
+. ~/.bash/functions
+. ~/.bash/aliases
+. ~/.bash/completions
+. ~/.bash/prompt
 
 # ssh host completion is dynamic.
 # Apparently when called from .bash/completions, ssh completion does not work?
