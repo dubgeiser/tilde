@@ -47,7 +47,7 @@
 	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
 	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
 	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
-	DIAIgAlRMSNAdKGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	DIAIgAlRMSNAc7Gdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
 	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
 	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
 	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
@@ -69,17 +69,19 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>640 691 400 129 0 0 1680 1050 </string>
+	<string>640 674 400 129 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>530 477 620 392 0 0 1680 1027 </string>
+	<string>424 382 700 622 0 0 1680 1027 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>269 207 599 388 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>420 551 796 473 0 0 1680 1027 </string>
+	<string>420 598 770 429 0 0 1680 1027 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 8 1675 247 0 0 1680 1027 </string>
+	<string>841 12 853 1015 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 4 730 502 0 0 1680 1027 </string>
+	<string>841 525 745 502 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>444 312 730 502 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -730,7 +732,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>0FD71A00-9C5F-4FBA-9315-BBC260D02A52</string>
 	<key>NoSyncLastTipTime</key>
-	<real>530694327.02961498</real>
+	<real>531735320.20405102</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -784,6 +786,16 @@
 		<string>0039</string>
 		<string>0040</string>
 		<string>0041</string>
+		<string>0042</string>
+		<string>0043</string>
+		<string>0044</string>
+		<string>0045</string>
+		<string>0046</string>
+		<string>0047</string>
+		<string>0048</string>
+		<string>0049</string>
+		<string>0050</string>
+		<string>0051</string>
 	</array>
 	<key>OpenArrangementAtStartup</key>
 	<false/>
@@ -839,10 +851,14 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-10-24T13:42:33Z</date>
+	<date>2017-11-07T08:16:33Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>ShowPaneTitles</key>
+	<false/>
 	<key>TabStyle</key>
+	<integer>0</integer>
+	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>TmuxDashboardLimit</key>
 	<integer>10</integer>
@@ -854,7 +870,7 @@
 		<string>Jobs</string>
 	</array>
 	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1508875648</real>
+	<real>1510042752</real>
 	<key>UseLionStyleFullscreen</key>
 	<false/>
 	<key>WordCharacters</key>
@@ -862,6 +878,6 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.1.4</string>
+	<string>3.1.5</string>
 </dict>
 </plist>
