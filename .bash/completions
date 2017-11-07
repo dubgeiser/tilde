@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+#
+# Setup bash completions for different tools.
+# Note that .bash/functions must be sourced before this file because we use
+# ssh_load_autocomplete here.
+#
+# Tip:
+# If an alias was defined for a command, completions for that command will not
+# work with the defined alias.
+# But completion can be configured for that alias, for example:
+# Supposing `alias g=git` one can do:
+#
+#   complete -o default -o nospace -F _git g
+#
+
+source /usr/local/etc/bash_completion.d/git-completion.bash
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+source /usr/local/etc/bash_completion.d/tmux
+
+# FZF
+# TODO split up? (because it does more than completion)
+#      Or move it to separate fzf file (as to not have 1 tool config spread
+#      over 3 files)
+if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
+  export PATH="$PATH:/usr/local/opt/fzf/bin"
+fi
+[[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.bash" 2> /dev/null
+source "/usr/local/opt/fzf/shell/key-bindings.bash"
+export FZF_DEFAULT_OPTS='--color=light'
