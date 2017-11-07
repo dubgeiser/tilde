@@ -171,10 +171,10 @@ ssh_install_default_vimrc() {
     fi
 }
 
+
 #
-# Given part of a repository name of a project, go to that project directory.
+# Change to a project directory quickly, using FZF.
 #
 prj() {
-    local project_name_part=$1
-    cd $DIR_PROJECTS/*$project_name_part*
+    cd $DIR_PROJECTS/$(ls $DIR_PROJECTS | fzf)
 }
