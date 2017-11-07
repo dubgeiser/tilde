@@ -1,22 +1,37 @@
+#!/usr/bin/env bash
+
+#
+# Configure Bash prompt.
+#
+
+
+# GIT prompt configuration
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWUPSTREAM="auto"
 GIT_PS1_SHOWCOLORHINTS=1
 
-# Prompt
 # Thanks @janmoesen for pointing me to the \[\] surrounding the non-printing
 # chars.  These are necessary to prevent issues with command line editing,
 # -browsing, -completion.
 PROMPT_COMMAND='__git_ps1 "\[${REVERSE}\]\[${BLUE}\] \t \[${NORMAL}\] \u@\h \[${BLUE}\]\W\[${NORMAL}\]" "\n"'
 INITIAL_PROMPT_COMMAND=$PROMPT_COMMAND
 
+
+#
+# Remove the git part from the prompt.
+# Useful when in a big directory: if you'd leave the git part on, the prompt
+# will take _seconds_ before it appears.
+#
 prompt_no_git() {
     PROMPT_COMMAND='PS1="\[${REVERSE}\]\[${BLUE}\] \t \[${NORMAL}\] \u@\h \[${BLUE}\]\W\[${NORMAL}\]\n"'
 }
 
+
+#
+# Restore the prompt back to its initial state.
+#
 prompt_restore() {
     PROMPT_COMMAND=$INITIAL_PROMPT_COMMAND
 }
-
-# vim:ft=sh:
