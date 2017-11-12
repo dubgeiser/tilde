@@ -16,7 +16,7 @@ GIT_PS1_SHOWCOLORHINTS=1
 # Thanks @janmoesen for pointing me to the \[\] surrounding the non-printing
 # chars.  These are necessary to prevent issues with command line editing,
 # -browsing, -completion.
-PROMPT_COMMAND='__git_ps1 "\[${REVERSE}\]\[${BLUE}\] \t \[${NORMAL}\] \[${BLUE}\]\W\[${NORMAL}\]" "\n-> "'
+PROMPT_COMMAND='__git_ps1 "\[${REVERSE}\]\[${BLUE}\] \d \t \n\[${BLUE}\] \w \[${NORMAL}\]" "\n\[${BOLD}\]\[${BLUE}\]->\[${NORMAL}\] "'
 INITIAL_PROMPT_COMMAND=$PROMPT_COMMAND
 
 
