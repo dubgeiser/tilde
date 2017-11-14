@@ -22,5 +22,3 @@ export GIT_EDITOR="$EDITOR"
 export HISTCONTROL=erasedups
 export HISTFILESIZE=10000000
 export HISTSIZE=1000000
-
-archey
