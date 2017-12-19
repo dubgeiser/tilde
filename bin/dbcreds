@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+#
+# Script that fetches database credentials from a server, identified by a given
+# SSH identifier (as named in ~/.ssh/config)
+#
+
+if [[ "$1" == "" ]]; then
+    echo "Usage: dbcreds <SSH_IDENTIFIER>"
+    exit 1
+fi
+
+
+SSH_IDENTIFIER=$1
+TMP_NAME=digipolisdbcredentials-`date +%Y-%m-%d-%H-%M-%S`
+
+ssh $SSH_IDENTIFIER 'head -30 apps/default/config/settings.php' > $TMP_NAME
+grep -i "'host'" $TMP_NAME
+grep -i "'username'" $TMP_NAME
+grep -i "'password'" $TMP_NAME
+grep -i "'database'" $TMP_NAME
+rm $TMP_NAME
