@@ -17,4 +17,4 @@ alias flarge='find . -type f -print0 | xargs -0 du -s | sort -n | tail -10 | cut
 
 # TODO days => hours [=> minutes [=> seconds]]
 # TODO configurable dates?
-alias daystill="python -c 'from datetime import date; print \"Nog %sX slapen.\" % (date(2016,2,5) - date.today()).days'"
+alias daystill="python -c 'from datetime import date; print \"Nog %sX slapen.\" % (date(2018,2,9) - date.today()).days'"
