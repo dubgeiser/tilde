@@ -15,6 +15,9 @@ alias gfame='git  ls-tree -r HEAD | cut -f 2 | grep -E '\.php$' | xargs -n1 git 
 # find the 10 largest files in the current directory
 alias flarge='find . -type f -print0 | xargs -0 du -s | sort -n | tail -10 | cut -f2 | xargs -I{} du -sh {}'
 
+# Use fzf to generate a link to a file in the S3 bucket 'yermama'
+alias ym='~/bin/ym $(aws ls -1 yermama | fzf)'
+
 # TODO days => hours [=> minutes [=> seconds]]
 # TODO configurable dates?
 alias daystill="python -c 'from datetime import date; print \"Nog %sX slapen.\" % (date(2018,2,9) - date.today()).days'"
