@@ -9,14 +9,5 @@ import sys
 import urllib.parse
 
 
-def usage():
-    print("usage: ym <filename>")
-
-
-if len(sys.argv) < 2:
-    usage()
-    exit(1)
-
-base_url = "https://yermama.s3-us-west-2.amazonaws.com/%s"
-file_name = sys.argv[1]
-print(base_url % urllib.parse.quote_plus(file_name), end='')
+sys.argv.pop(0)
+print("https://yermama.s3-us-west-2.amazonaws.com/%s" % urllib.parse.quote_plus(" ".join(sys.argv)), end='')
