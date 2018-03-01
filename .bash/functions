@@ -63,15 +63,15 @@ dev() {
 # Create a new tmux session for developing.
 #
 tmux_create_dev_session() {
-    pushd `pwd`
     local project=$1
 
-    if [ -d $DIR_PROJECTS/$project ]; then
-        path=$DIR_PROJECTS/$project
-    else
+    if [ ! -d $DIR_PROJECTS/$project ]; then
         echo "$project not found, exiting (TODO: offer to create it?)"
         return 1
     fi
+
+    path=$DIR_PROJECTS/$project
+    pushd `pwd`
 
     # Start relative from the project path; we don't have to send 'cd $path' to
     # the tmux sessions.
