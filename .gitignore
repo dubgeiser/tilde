@@ -27,6 +27,7 @@ default-soapui-workspace.xml
 /.gist-vim
 /.git-completion.bash
 /.gitk
+/.gnupg
 /.gvimrc
 /.heroku
 /.irb_history
