@@ -25,6 +25,8 @@
     pullff = pull --ff-only
     s = status --short --branch
     branchauthors = "! for branch in `git branch -r | grep -v HEAD`;do echo `git show --pretty=whowhenwhere $branch | head -n 1` \t$branch; done | sort -r"
+    changelog = tag -l -n1000 --sort=v:refname
+    lastversion = "!git tag -l --sort=v:refname | tail -1"
 
 [color]
     ui = auto
