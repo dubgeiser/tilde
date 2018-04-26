@@ -63,6 +63,7 @@ default-soapui-workspace.xml
 /.wget-hsts
 /.wireshark
 /.wireshark-etc
+/package-lock.json
 
 /Applications/
 /Desktop/
@@ -81,3 +82,4 @@ default-soapui-workspace.xml
 
 /bin/drush
 /etc/
+/node_modules/
