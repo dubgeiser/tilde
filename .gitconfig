@@ -34,7 +34,7 @@
     # DG releases and CHANGELOG
     release-log = log --pretty=format:'(%h) %s%n%w(72,10,10)%b%w(72,0,0)by %an on %ad%n' --date=local --no-merges
     release-notes = "!f() { git release-log \"${1:-$(git describe --abbrev=0 --tags)}\"..\"${2:-$(git rev-parse HEAD)}\"; }; f \"$@\""
-    release-tag = "!f() { git rn | git tag -a \"$1\" -F -; }; f \"$@\""
+    release-tag = "!f() { git release-notes | git tag -a \"$1\" -F -; }; f \"$@\""
 
 [color]
     ui = auto
