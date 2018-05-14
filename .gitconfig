@@ -37,6 +37,10 @@
     release-notes = "!f() { git release-log \"${1:-$(git describe --abbrev=0 --tags)}\"..\"${2:-$(git rev-parse HEAD)}\"; }; f \"$@\""
     release-tag = "!f() { git release-notes | git tag -a \"$1\" -F -; }; f \"$@\""
 
+    # Tags should not be created on a commit in a non-master branch.
+    # Listing them will at least allow us to find out which tags were "bad"
+    bad-tags = "! for tag in `git tag`; do echo $tag && git branch --contains tags/$tag; done"
+
 [color]
     ui = auto
 
