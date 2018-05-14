@@ -50,3 +50,7 @@
     # Take time to try to produce better diffs.
     algorithm = patience
     tool = vimdiff
+
+[merge]
+    # Add a list of merged commits to the generated commit message.
+    log = true
