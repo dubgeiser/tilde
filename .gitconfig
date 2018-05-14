@@ -47,4 +47,6 @@
     default = simple
 
 [diff]
+    # Take time to try to produce better diffs.
+    algorithm = patience
     tool = vimdiff
