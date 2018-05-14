@@ -19,7 +19,6 @@
     amend = commit --amend
     au = add --update
     co = checkout
-    d = diff
     dc = diff --cached
     info = "!echo && git remote -v && echo && git branch -a"
     l = "!echo && (git --no-pager log -15 --pretty=shortnsweet) && echo"
