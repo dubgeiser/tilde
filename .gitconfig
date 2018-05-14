@@ -30,7 +30,7 @@
     branchauthors = "! for branch in `git branch -r | grep -v HEAD`;do echo `git show --pretty=whowhenwhere $branch | head -n 1` \t$branch; done | sort -r"
     changelog = tag -l -n1000 --sort=v:refname
 
-    ; Last version; show latest tag on the current branch.
+    # Last version; show latest tag on the current branch.
     lastversion = describe --abbrev=0 --tags
 
     # DG releases and CHANGELOG
