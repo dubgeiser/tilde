@@ -29,7 +29,9 @@
     s = status --short --branch
     branchauthors = "! for branch in `git branch -r | grep -v HEAD`;do echo `git show --pretty=whowhenwhere $branch | head -n 1` \t$branch; done | sort -r"
     changelog = tag -l -n1000 --sort=v:refname
-    lastversion = "!git tag -l --sort=v:refname | tail -1"
+
+    ; Last version; show latest tag on the current branch.
+    lastversion = describe --abbrev=0 --tags
 
     # DG releases and CHANGELOG
     release-log = log --pretty=format:'(%h) %s%n%w(72,10,10)%b%w(72,0,0)by %an on %ad%n' --date=local --no-merges
