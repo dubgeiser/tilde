@@ -22,3 +22,5 @@ export GIT_EDITOR="$EDITOR"
 export HISTCONTROL=erasedups
 export HISTFILESIZE=10000000
 export HISTSIZE=1000000
+
+export LIQUIBASE_HOME=/usr/local/opt/liquibase/libexec
