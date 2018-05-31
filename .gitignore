@@ -23,6 +23,7 @@ default-soapui-workspace.xml
 /.dropbox/
 /.drush/
 /.filezilla/
+/.freemind/
 /.gem/
 /.gist-vim
 /.git-completion.bash
