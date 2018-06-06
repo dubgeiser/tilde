@@ -169,5 +169,9 @@ ssh_install_default_vimrc() {
 # Change to a project directory quickly, using FZF.
 #
 prj() {
-    cd $DIR_PROJECTS/$(ls $DIR_PROJECTS | fzf)
+    local project=$(ls $DIR_PROJECTS | fzf)
+    if [[ "$project" != "" ]]
+    then
+        cd "$DIR_PROJECTS/$project"
+    fi
 }
