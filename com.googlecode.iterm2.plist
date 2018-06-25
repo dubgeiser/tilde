@@ -968,7 +968,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-06-25T08:10:49Z</date>
+	<date>2018-06-25T09:32:45Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1001,6 +1001,6 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.2.0beta3</string>
+	<string>3.2.0beta5</string>
 </dict>
 </plist>
