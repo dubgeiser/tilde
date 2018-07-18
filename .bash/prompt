@@ -13,10 +13,43 @@ GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWUPSTREAM="auto"
 GIT_PS1_SHOWCOLORHINTS=1
 
+
+has_virtualenv() {
+    if test -n "$VIRTUAL_ENV"; then
+        return 0
+    fi
+    return 1
+}
+
+
+#
+# Sourcing virtualenv's ./bin/activate should do this, but this modifies the PS1
+# environment variable... which has no effect, due to the standard usage of the
+# __git_ps1() function.
+#
+prompt_fragment_virtualenv() {
+    if has_virtualenv; then
+        echo "$(basename $VIRTUAL_ENV)"
+    fi
+}
+
+
+#
+# The fragment in the prompt at the line the cursor is on.
+#
+prompt_fragment_cursor_line() {
+    if has_virtualenv; then
+        echo "\[${RED}\]\[${REVERSE}\] $(prompt_fragment_virtualenv) \[${NORMAL}\] "
+    else
+        echo "\[${REVERSE}\]  \[${NORMAL}\] "
+    fi
+}
+
+
 # Thanks @janmoesen for pointing me to the \[\] surrounding the non-printing
 # chars.  These are necessary to prevent issues with command line editing,
 # -browsing, -completion.
-PROMPT_COMMAND='__git_ps1 "\[${REVERSE}\] \w \[${NORMAL}\]" " [\$?]\n\[${REVERSE}\]   \[${NORMAL}\] "'
+PROMPT_COMMAND='__git_ps1 "\[${REVERSE}\] \w \[${NORMAL}\]" " [\$?]\n$(prompt_fragment_cursor_line)"'
 INITIAL_PROMPT_COMMAND=$PROMPT_COMMAND
 
 
