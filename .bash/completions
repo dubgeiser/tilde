@@ -14,9 +14,12 @@
 #   complete -o default -o nospace -F _git g
 #
 
-source /usr/local/etc/bash_completion.d/git-completion.bash
-source /usr/local/etc/bash_completion.d/git-prompt.sh
-source /usr/local/etc/bash_completion.d/tmux
+# Bash completions installed by Homebrew
+# These are symlinks, so the "@" is removed.
+homebrew_completions=/usr/local/etc/bash_completion.d
+for each in $(ls $homebrew_completions); do
+    source "$homebrew_completions/${each%@}"
+done
 
 # FZF
 # TODO split up? (because it does more than completion)
