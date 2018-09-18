@@ -14,7 +14,7 @@
 ssh_load_autocomplete
 
 # Path and environment vars.
-PATH="/usr/local/php5/bin:~/bin:~/.composer/vendor/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+PATH="/usr/local/php5/bin:~/bin:~/.composer/vendor/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/opt/sqlite/bin:$PATH"
 export EDITOR=vim
 export GIT_EDITOR="$EDITOR"
 
