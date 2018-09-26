@@ -33,9 +33,9 @@
     lastversion = describe --abbrev=0 --tags
 
     # DG releases and CHANGELOG
-    release-log = log --pretty=format:'(%h) %s%n%w(72,10,10)%b%w(72,0,0)by %an on %ad%n' --date=local --no-merges
+    release-log = log --pretty=format:'[%h] %s%n%w(76,4,4)%b%w(76,4,0)By %an on %ad%n' --date=local --no-merges
     release-notes = "!f() { git release-log \"${1:-$(git describe --abbrev=0 --tags)}\"..\"${2:-$(git rev-parse HEAD)}\"; }; f \"$@\""
-    release-tag = "!f() { git release-notes | git tag -a \"$1\" -F -; }; f \"$@\""
+    release-tag = "!f() { git { echo \"Release $1\n\nChanges:\n\n\"; release-notes } | git tag -a \"$1\" -F -; }; f \"$@\""
 
     # Tags should not be created on a commit in a non-master branch.
     # Listing them will at least allow us to find out which tags were "bad"
