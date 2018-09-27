@@ -34,7 +34,7 @@
 
     # DG releases and CHANGELOG
     release-log = log --date=local --no-merges --no-color
-    release-notes = "!f() { git release-log \"${1:-$(git describe --abbrev=0 --tags)}\"..\"${2:-$(git rev-parse HEAD)}\"; }; f \"$@\""
+    release-notes = "!f() { git release-log \"${1:-$(git lastversion)}\"..\"${2:-$(git rev-parse HEAD)}\"; }; f \"$@\""
     release-tag = "!f() { { echo \"Release $1\n\n\"; git release-notes; } | git tag -a \"$1\" -F -; }; f \"$@\""
 
     # Tags should not be created on a commit in a non-master branch.
