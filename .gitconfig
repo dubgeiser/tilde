@@ -33,7 +33,7 @@
     lastversion = describe --abbrev=0 --tags
 
     # DG releases and CHANGELOG
-    release-log = log --pretty=format:'[%h] %s%n%w(76,4,4)%b%w(76,4,0)By %an on %ad%n' --date=local --no-merges
+    release-log = log --date=local --no-merges --no-color
     release-notes = "!f() { git release-log \"${1:-$(git describe --abbrev=0 --tags)}\"..\"${2:-$(git rev-parse HEAD)}\"; }; f \"$@\""
     release-tag = "!f() { { echo \"Release $1\n\nChanges:\n\n\"; git release-notes; } | git tag -a \"$1\" -F -; }; f \"$@\""
 
