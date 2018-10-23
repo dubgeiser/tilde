@@ -22,7 +22,7 @@ DIR_PROJECTS=~/Projects
 # Attach to an existing tmux session, create the session if it doesn't exist.
 # If no session is given, create one based on the current working directory.
 #
-dev() {
+tat() {
     local project=$1
     local switch=""
 
