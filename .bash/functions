@@ -19,16 +19,6 @@ DIR_PROJECTS=~/Projects
 
 
 #
-# cd to the directory the Finder is in.
-# By @sindresorhus taken from:
-# https://github.com/paulirish/dotfiles/commit/e67d1bc03
-#
-cdf() {
-    cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
-}
-
-
-#
 # Attach to an existing tmux session, create the session if it doesn't exist.
 # If no session is given, create one based on the current working directory.
 #
