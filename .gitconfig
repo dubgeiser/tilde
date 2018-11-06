@@ -60,3 +60,6 @@
 [merge]
     # Add a list of merged commits to the generated commit message.
     log = true
+
+[difftool]
+    prompt = false
