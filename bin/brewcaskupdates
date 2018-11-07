@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+
+casks=$(brew cask list)
+for cask in $casks; do
+    brew cask info $cask | egrep -i "(.*: \d+\.\d+\.\d+)|(\/usr\/local\/Caskroom\/.*\d+\.\d+\.\d+)"
+    echo
+done
