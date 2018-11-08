@@ -3,6 +3,7 @@
 
 casks=$(brew cask list)
 for cask in $casks; do
-    brew cask info $cask | egrep -i "(.*: \d+\.\d+\.\d+)|(\/usr\/local\/Caskroom\/.*\d+\.\d+\.\d+)"
+    brew cask info $cask \
+        | egrep -i "(.*: ((\d+\.)+|latest))|(\/usr\/local\/caskroom\/.*(\d+\.)+)"
     echo
 done
