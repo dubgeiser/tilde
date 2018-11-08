@@ -3,6 +3,11 @@
 
 casks=$(brew cask list)
 for cask in $casks; do
+    # MacVim was not installed via cask, but somehow it shows up in the list.
+    # Filtering it out, because we cannot upgrade it via brew cask.
+    if [[ "$cask" == "macvim" ]]; then
+        continue
+    fi
     brew cask info $cask \
         | egrep -i "(.*: ((\d+\.)+|latest))|(\/usr\/local\/caskroom\/.*(\d+\.)+)"
     echo
