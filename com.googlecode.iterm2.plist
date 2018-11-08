@@ -114,7 +114,7 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>101 520 609 401 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>129 362 796 486 0 0 1920 1057 </string>
+	<string>129 476 770 429 0 0 1920 1057 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -980,6 +980,8 @@
 	<false/>
 	<key>ShowBookmarkName</key>
 	<true/>
+	<key>ShowFullScreenTabBar</key>
+	<false/>
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>TabStyle</key>
