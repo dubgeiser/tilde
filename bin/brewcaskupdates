@@ -1,14 +1,36 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
 
 
-casks=$(brew cask list)
-for cask in $casks; do
-    # MacVim was not installed via cask, but somehow it shows up in the list.
-    # Filtering it out, because we cannot upgrade it via brew cask.
-    if [[ "$cask" == "macvim" ]]; then
-        continue
-    fi
-    brew cask info $cask \
-        | egrep -i "(.*: ((\d+\.)+|latest))|(\/usr\/local\/caskroom\/.*(\d+\.)+)"
-    echo
-done
+from subprocess import check_output
+import re
+
+
+class Cask(object):
+    """ Representation of a Homebrew cask.
+
+    Only handle the information necessary to determine if a cask's current
+    version is different from the one installed.
+    """
+
+    def __init__(self, name):
+        info = check_output(f'brew cask info {name}', shell=True).decode('UTF-8').split("\n")
+        self.name = name
+        self.version = info[0].split()[1]
+        self.version_installed = re.match(fr'/usr/local/Caskroom/{name}/(.*)', info[2].split()[0])[1]
+
+    def version_changed(self):
+        return self.version != self.version_installed
+
+    @staticmethod
+    def installed():
+        cask_names = [x.decode('UTF-8') for x in check_output('brew cask list', shell=True).split()]
+        cask_names.remove('macvim') # TODO: Only remove when not cask-installed.
+        return [Cask(name) for name in cask_names]
+
+    @staticmethod
+    def updated():
+        return [cask for cask in Cask.installed() if cask.version_changed()]
+
+
+if __name__ == '__main__':
+    print('{' + ','.join([cask.name for cask in Cask.updated()]) + '}')
