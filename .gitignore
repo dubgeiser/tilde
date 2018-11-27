@@ -32,6 +32,7 @@ default-soapui-workspace.xml
 /.gnupg
 /.gvimrc
 /.heroku
+/.ipython
 /.irb_history
 /.irssi
 /.iterm2
