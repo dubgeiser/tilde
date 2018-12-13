@@ -14,11 +14,15 @@
 #   complete -o default -o nospace -F _git g
 #
 
-# Bash completions installed by Homebrew
-# These are symlinks, so the "@" is removed.
 homebrew_completions=/usr/local/etc/bash_completion.d
 for each in $(ls $homebrew_completions); do
-    source "$homebrew_completions/${each%@}"
+    # These are symlinks, so the "@" is removed.
+    fn="${each%@}"
+
+    # Completions for the Silver Searchers screw up Bash's path completion.
+    if [[ "$fn" != "ag.bashcomp.sh" ]]; then
+        source "$homebrew_completions/$fn"
+    fi
 done
 
 # FZF
