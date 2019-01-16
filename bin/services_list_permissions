@@ -1,0 +1,51 @@
+#!/usr/bin/env php
+<?php
+
+/*
+
+Throw this script in a directory in your path and edit the database
+configuration to suit your local setup.
+
+Import the `endpoint_client` table into your local services database and run
+this script; you'll get output in the following format (1 line per permission):
+
+<CLIENT NAME> [<CLIENT ID>]: <PERMISSION GROUP>.<PERMISSION>: (YES|NO)
+
+By adding some grepping, awking and other shell shenanigans, you can get info
+out that managers might ask, like:
+"Give me a list of clients that have access to create 'historiekberichten'":
+
+    $ services_list_permissions | ag --nocolor 'log\.add: YES' | awk -F ': ' '{print $1}'
+
+etc...
+
+*/
+
+// database configuration
+$dbName = 'services';
+$dbHost = 'localhost';
+$dbUser = 'root';
+$dbPass = null;
+
+$sql = 'SELECT * FROM endpoint_client ORDER BY name';
+
+define('EOL', "\n");
+
+$pdo = new PDO("mysql:dbname=$dbName;host=$dbHost", $dbUser, $dbPass);
+$stm = $pdo->query($sql);
+foreach ($stm as $row) {
+    $client = $row['name'];
+    $id = $row['cid'];
+    $allPermissions = unserialize($row['permissions']);
+    foreach ($allPermissions as $permissionGroup => $permissionsAsArray) {
+
+        // I don't know why permissions in a group are in a single-element-array
+        // with key '1'... but they are.
+        $permissions = $permissionsAsArray[1];
+
+        foreach ($permissions as $permName => $permAccess) {
+            $hasAccess = (bool)$permAccess['access'] ? 'YES' : 'NO';
+            echo "$client [$id]: $permissionGroup.$permName: $hasAccess", EOL;
+        }
+    }
+}
