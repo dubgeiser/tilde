@@ -16,6 +16,10 @@
 	<true/>
 	<key>CheckTestRelease</key>
 	<true/>
+	<key>ClosingTmuxTabKillsTmuxWindows</key>
+	<true/>
+	<key>ClosingTmuxTabKillsTmuxWindows_selection</key>
+	<integer>0</integer>
 	<key>Control</key>
 	<integer>1</integer>
 	<key>CopySelection</key>
@@ -589,13 +593,13 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>101 520 609 401 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>128 548 918 452 0 0 1920 1057 </string>
+	<string>128 522 918 512 0 0 1920 1057 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 473 592 584 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>950 377 970 680 0 0 1920 1057 </string>
+	<string>0 0 1680 1050 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>960 377 970 680 0 0 1920 1057 </string>
+	<string>-15 183 970 680 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>468 188 874 650 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
