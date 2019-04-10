@@ -1342,59 +1342,30 @@
 				<array>
 					<dict>
 						<key>class</key>
-						<string>iTermStatusBarWorkingDirectoryComponent</string>
+						<string>iTermStatusBarClockComponent</string>
 						<key>configuration</key>
 						<dict>
 							<key>knobs</key>
 							<dict>
 								<key>base: compression resistance</key>
-								<integer>1</integer>
+								<real>1</real>
 								<key>base: priority</key>
 								<real>5</real>
-								<key>maxwidth</key>
-								<real>+infinity</real>
-								<key>minwidth</key>
-								<real>0.0</real>
-								<key>shared text color</key>
+								<key>format</key>
+								<string>H:mm</string>
+								<key>shared background color</key>
 								<dict>
 									<key>Alpha Component</key>
 									<real>1</real>
 									<key>Blue Component</key>
-									<real>0.62999999523162842</real>
+									<real>0.0</real>
 									<key>Color Space</key>
 									<string>sRGB</string>
 									<key>Green Component</key>
-									<real>0.62999999523162842</real>
+									<real>0.0</real>
 									<key>Red Component</key>
-									<real>0.89999997615814209</real>
+									<real>0.0</real>
 								</dict>
-							</dict>
-							<key>layout advanced configuration dictionary value</key>
-							<dict>
-								<key>algorithm</key>
-								<integer>0</integer>
-								<key>font</key>
-								<string>IBMPlexSansCond 14</string>
-							</dict>
-						</dict>
-					</dict>
-					<dict>
-						<key>class</key>
-						<string>iTermStatusBarGitComponent</string>
-						<key>configuration</key>
-						<dict>
-							<key>knobs</key>
-							<dict>
-								<key>base: compression resistance</key>
-								<integer>1</integer>
-								<key>base: priority</key>
-								<real>5</real>
-								<key>iTermStatusBarGitComponentPollingIntervalKey</key>
-								<real>2</real>
-								<key>maxwidth</key>
-								<real>+infinity</real>
-								<key>minwidth</key>
-								<integer>0</integer>
 								<key>shared text color</key>
 								<dict>
 									<key>Alpha Component</key>
@@ -1404,9 +1375,9 @@
 									<key>Color Space</key>
 									<string>sRGB</string>
 									<key>Green Component</key>
-									<real>0.89999997615814209</real>
+									<real>0.62999999523162842</real>
 									<key>Red Component</key>
-									<real>0.84600001573562622</real>
+									<real>0.89999997615814209</real>
 								</dict>
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
@@ -1427,18 +1398,31 @@
 							<dict>
 								<key>base: priority</key>
 								<real>5</real>
+								<key>shared background color</key>
+								<dict>
+									<key>Alpha Component</key>
+									<real>1</real>
+									<key>Blue Component</key>
+									<real>0.0</real>
+									<key>Color Space</key>
+									<string>sRGB</string>
+									<key>Green Component</key>
+									<real>0.0</real>
+									<key>Red Component</key>
+									<real>0.0</real>
+								</dict>
 								<key>shared text color</key>
 								<dict>
 									<key>Alpha Component</key>
 									<real>1</real>
 									<key>Blue Component</key>
-									<real>0.73799997568130493</real>
+									<real>0.62999999523162842</real>
 									<key>Color Space</key>
 									<string>sRGB</string>
 									<key>Green Component</key>
 									<real>0.89999997615814209</real>
 									<key>Red Component</key>
-									<real>0.62999999523162842</real>
+									<real>0.76499998569488525</real>
 								</dict>
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
@@ -1459,6 +1443,32 @@
 							<dict>
 								<key>base: priority</key>
 								<real>5</real>
+								<key>shared background color</key>
+								<dict>
+									<key>Alpha Component</key>
+									<real>1</real>
+									<key>Blue Component</key>
+									<real>0.0</real>
+									<key>Color Space</key>
+									<string>sRGB</string>
+									<key>Green Component</key>
+									<real>0.0</real>
+									<key>Red Component</key>
+									<real>0.0</real>
+								</dict>
+								<key>shared text color</key>
+								<dict>
+									<key>Alpha Component</key>
+									<real>1</real>
+									<key>Blue Component</key>
+									<real>0.89999997615814209</real>
+									<key>Color Space</key>
+									<string>sRGB</string>
+									<key>Green Component</key>
+									<real>0.89999997615814209</real>
+									<key>Red Component</key>
+									<real>0.62999999523162842</real>
+								</dict>
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
 							<dict>
@@ -1478,6 +1488,19 @@
 							<dict>
 								<key>base: priority</key>
 								<real>5</real>
+								<key>shared background color</key>
+								<dict>
+									<key>Alpha Component</key>
+									<real>1</real>
+									<key>Blue Component</key>
+									<real>0.0</real>
+									<key>Color Space</key>
+									<string>sRGB</string>
+									<key>Green Component</key>
+									<real>0.0</real>
+									<key>Red Component</key>
+									<real>0.0</real>
+								</dict>
 								<key>shared text color</key>
 								<dict>
 									<key>Alpha Component</key>
@@ -1489,7 +1512,7 @@
 									<key>Green Component</key>
 									<real>0.62999999523162842</real>
 									<key>Red Component</key>
-									<real>0.84600001573562622</real>
+									<real>0.76499998569488525</real>
 								</dict>
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
@@ -2292,7 +2315,7 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1920, 1080}}</string>
 		<key>topLeft</key>
-		<string>{175, 903}</string>
+		<string>{129, 903}</string>
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
@@ -2307,7 +2330,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>559034475.86420906</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>21</integer>
+	<integer>22</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2974,6 +2997,8 @@
 	<false/>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>2</integer>
+	<key>PerPaneBackgroundImage</key>
+	<true/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -3030,7 +3055,7 @@
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SeparateStatusBarsPerPane</key>
-	<true/>
+	<false/>
 	<key>ShowBookmarkName</key>
 	<true/>
 	<key>ShowFullScreenTabBar</key>
