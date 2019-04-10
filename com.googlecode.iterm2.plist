@@ -1371,13 +1371,13 @@
 									<key>Alpha Component</key>
 									<real>1</real>
 									<key>Blue Component</key>
-									<real>0.62999999523162842</real>
+									<real>1</real>
 									<key>Color Space</key>
 									<string>sRGB</string>
 									<key>Green Component</key>
-									<real>0.62999999523162842</real>
+									<real>1</real>
 									<key>Red Component</key>
-									<real>0.89999997615814209</real>
+									<real>1</real>
 								</dict>
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
@@ -1416,13 +1416,13 @@
 									<key>Alpha Component</key>
 									<real>1</real>
 									<key>Blue Component</key>
-									<real>0.62999999523162842</real>
+									<real>0.278656005859375</real>
 									<key>Color Space</key>
 									<string>sRGB</string>
 									<key>Green Component</key>
-									<real>0.89999997615814209</real>
+									<real>0.36232997197657824</real>
 									<key>Red Component</key>
-									<real>0.76499998569488525</real>
+									<real>1</real>
 								</dict>
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
@@ -1461,13 +1461,13 @@
 									<key>Alpha Component</key>
 									<real>1</real>
 									<key>Blue Component</key>
-									<real>0.89999997615814209</real>
+									<real>0.457427978515625</real>
 									<key>Color Space</key>
 									<string>sRGB</string>
 									<key>Green Component</key>
-									<real>0.89999997615814209</real>
+									<real>1</real>
 									<key>Red Component</key>
-									<real>0.62999999523162842</real>
+									<real>0.57119788695126772</real>
 								</dict>
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
@@ -1506,13 +1506,13 @@
 									<key>Alpha Component</key>
 									<real>1</real>
 									<key>Blue Component</key>
-									<real>0.89999997615814209</real>
+									<real>0.9857177734375</real>
 									<key>Color Space</key>
 									<string>sRGB</string>
 									<key>Green Component</key>
-									<real>0.62999999523162842</real>
+									<real>0.80748684822538053</real>
 									<key>Red Component</key>
-									<real>0.76499998569488525</real>
+									<real>0.57853162288665771</real>
 								</dict>
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
@@ -2330,7 +2330,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>559034475.86420906</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>22</integer>
+	<integer>23</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
