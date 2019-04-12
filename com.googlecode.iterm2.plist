@@ -591,7 +591,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>797 323 445 77 0 0 1680 1027 </string>
+	<string>797 291 445 77 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>640 673 400 129 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
@@ -607,7 +607,7 @@
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 370 970 657 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>468 188 874 650 0 0 1680 1027 </string>
+	<string>468 167 970 657 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>254 0 874 650 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
@@ -1324,7 +1324,7 @@
 			<key>Show Mark Indicators</key>
 			<false/>
 			<key>Show Status Bar</key>
-			<true/>
+			<false/>
 			<key>Silence Bell</key>
 			<false/>
 			<key>Space</key>
@@ -1336,7 +1336,7 @@
 					<key>algorithm</key>
 					<integer>1</integer>
 					<key>font</key>
-					<string>IBMPlexSansCond 16</string>
+					<string>IBMPlexSansCond-Bold 18</string>
 				</dict>
 				<key>components</key>
 				<array>
@@ -1355,6 +1355,21 @@
 								<real>+infinity</real>
 								<key>minwidth</key>
 								<real>0.0</real>
+								<key>path</key>
+								<string>path</string>
+								<key>shared background color</key>
+								<dict>
+									<key>Alpha Component</key>
+									<real>1</real>
+									<key>Blue Component</key>
+									<real>0.0</real>
+									<key>Color Space</key>
+									<string>sRGB</string>
+									<key>Green Component</key>
+									<real>0.0</real>
+									<key>Red Component</key>
+									<real>0.0</real>
+								</dict>
 								<key>shared text color</key>
 								<dict>
 									<key>Alpha Component</key>
@@ -1374,7 +1389,7 @@
 								<key>algorithm</key>
 								<integer>1</integer>
 								<key>font</key>
-								<string>IBMPlexSansCond 16</string>
+								<string>IBMPlexSansCond-Bold 18</string>
 							</dict>
 						</dict>
 					</dict>
@@ -1395,18 +1410,31 @@
 								<real>+infinity</real>
 								<key>minwidth</key>
 								<integer>0</integer>
+								<key>shared background color</key>
+								<dict>
+									<key>Alpha Component</key>
+									<real>1</real>
+									<key>Blue Component</key>
+									<real>0.0</real>
+									<key>Color Space</key>
+									<string>sRGB</string>
+									<key>Green Component</key>
+									<real>0.0</real>
+									<key>Red Component</key>
+									<real>0.0</real>
+								</dict>
 								<key>shared text color</key>
 								<dict>
 									<key>Alpha Component</key>
 									<real>1</real>
 									<key>Blue Component</key>
-									<real>0.13333333333333333</real>
+									<real>0.13333334028720856</real>
 									<key>Color Space</key>
 									<string>sRGB</string>
 									<key>Green Component</key>
-									<real>0.6470588235294118</real>
+									<real>0.64705884456634521</real>
 									<key>Red Component</key>
-									<real>0.6588235294117647</real>
+									<real>0.65882354974746704</real>
 								</dict>
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
@@ -1414,7 +1442,7 @@
 								<key>algorithm</key>
 								<integer>1</integer>
 								<key>font</key>
-								<string>IBMPlexSansCond 16</string>
+								<string>IBMPlexSansCond-Bold 18</string>
 							</dict>
 						</dict>
 					</dict>
@@ -1425,20 +1453,20 @@
 						<dict>
 							<key>knobs</key>
 							<dict>
-								<key>iTermStatusBarSpringComponentSizeMultipleKey</key>
-								<integer>1</integer>
-								<key>shared text color</key>
+								<key>iTermStatusBarSpringComponentSpringConstantKey</key>
+								<real>0.01</real>
+								<key>shared background color</key>
 								<dict>
 									<key>Alpha Component</key>
 									<real>1</real>
 									<key>Blue Component</key>
-									<real>0.90000000000000002</real>
+									<real>0.0</real>
 									<key>Color Space</key>
 									<string>sRGB</string>
 									<key>Green Component</key>
-									<real>0.90000000000000002</real>
+									<real>0.0</real>
 									<key>Red Component</key>
-									<real>0.63</real>
+									<real>0.0</real>
 								</dict>
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
@@ -1446,7 +1474,7 @@
 								<key>algorithm</key>
 								<integer>1</integer>
 								<key>font</key>
-								<string>IBMPlexSansCond 16</string>
+								<string>IBMPlexSansCond-Bold 18</string>
 							</dict>
 						</dict>
 					</dict>
@@ -1481,13 +1509,13 @@
 									<key>Alpha Component</key>
 									<real>1</real>
 									<key>Blue Component</key>
-									<real>0.69803921568627447</real>
+									<real>0.69803923368453979</real>
 									<key>Color Space</key>
 									<string>sRGB</string>
 									<key>Green Component</key>
-									<real>0.85882352941176465</real>
+									<real>0.85882353782653809</real>
 									<key>Red Component</key>
-									<real>0.92941176470588238</real>
+									<real>0.92941176891326904</real>
 								</dict>
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
@@ -1495,7 +1523,7 @@
 								<key>algorithm</key>
 								<integer>1</integer>
 								<key>font</key>
-								<string>IBMPlexSansCond 16</string>
+								<string>IBMPlexSansCond-Bold 18</string>
 							</dict>
 						</dict>
 					</dict>
@@ -2290,7 +2318,7 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1680, 1050}}</string>
 		<key>topLeft</key>
-		<string>{90, 894}</string>
+		<string>{65, 959}</string>
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
@@ -2305,7 +2333,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>559034475.86420906</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>24</integer>
+	<integer>25</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
