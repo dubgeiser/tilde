@@ -28,3 +28,6 @@ alias daystill="python -c 'from datetime import date; print \"Nog %sX slapen.\" 
 # "Default" is the name of the default iTerm2 profile.
 # TODO Replace "Default" with the actual profile name if possible.
 alias restoretitle="echo -ne \"\e]1;Default\a\""
+
+alias t=tat
+alias w=prj
