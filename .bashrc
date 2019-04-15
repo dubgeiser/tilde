@@ -19,7 +19,7 @@ export EDITOR=vim
 export GIT_EDITOR="$EDITOR"
 
 # Keep more of the command history, keep it common and try not to have duplicates.
-export HISTCONTROL=ignoredups:erasedups
+export HISTCONTROL=ignoredups
 shopt -s histappend
 export HISTFILESIZE=10000000
 export HISTSIZE=1000000
