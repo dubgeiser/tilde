@@ -18,8 +18,9 @@ PATH="/usr/local/php5/bin:~/bin:~/.composer/vendor/bin:/usr/local/bin:/usr/local
 export EDITOR=vim
 export GIT_EDITOR="$EDITOR"
 
-# Keep more of the command history
-export HISTCONTROL=erasedups
+# Keep more of the command history, keep it common and try not to have duplicates.
+export HISTCONTROL=ignoredups:erasedups
+shopt -s histappend
 export HISTFILESIZE=10000000
 export HISTSIZE=1000000
 
