@@ -46,7 +46,7 @@ tat() {
 
     fi
 
-    $switch $project
+    $switch "$project"
 }
 
 
@@ -64,9 +64,9 @@ imgur() {
     local url_api_upload="http://api.imgur.com/2/upload.xml"
 
     local fn_image="/tmp/screenshot-`date +%Y-%m-%d-%H-%M-%S`.png"
-    screencapture -ix $fn_image
+    screencapture -ix "$fn_image"
     local response=`curl -s -F "image=@$fn_image" -F "key=$api_key" $url_api_upload`
-    echo $response | tail -1 | sed -E 's/.*<original>(.*)<\/original>.*/\1/'
+    echo "$response" | tail -1 | sed -E 's/.*<original>(.*)<\/original>.*/\1/'
 }
 
 
@@ -87,9 +87,9 @@ ssh_configure_host() {
         echo "usage: ssh_configure_host <identifier> <hostname> <username>"
     else
         echo -e "Host $identifier\n\tHostName $hostname\n\tUser $username\n\tIdentityFile ~/.ssh/id_rsa\n\tForwardAgent yes" >> ~/.ssh/config
-        ssh $identifier 'mkdir -p .ssh && cat >> ~/.ssh/authorized_keys' < ~/.ssh/id_rsa.pub
+        ssh "$identifier" 'mkdir -p .ssh && cat >> ~/.ssh/authorized_keys' < ~/.ssh/id_rsa.pub
         # TODO Use ssh_test_key()?
-        tput bold; ssh -o PasswordAuthentication=no $identifier true && { tput setaf 2; echo 'Success!'; } || { tput setaf 1; echo 'Failure'; }; tput sgr0
+        tput bold; ssh -o PasswordAuthentication=no "$identifier" true && { tput setaf 2; echo 'Success!'; } || { tput setaf 1; echo 'Failure'; }; tput sgr0
         ssh_load_autocomplete
     fi
 }
@@ -109,7 +109,7 @@ ssh_load_autocomplete() {
 #
 ssh_test_key() {
     local identifier=$1
-    ssh -o PasswordAuthentication=no $identifier true && { tput setaf 2; echo 'Success!'; } || { tput setaf 1; echo 'Failure'; }; tput sgr0
+    ssh -o PasswordAuthentication=no "$identifier" true && { tput setaf 2; echo 'Success!'; } || { tput setaf 1; echo 'Failure'; }; tput sgr0
 }
 
 
@@ -122,7 +122,7 @@ ssh_install_default_vimrc() {
     then
         echo "usage: ssh_install_default_vimrc <identifier>"
     else
-        ssh $identifier 'curl https://raw.githubusercontent.com/tpope/vim-sensible/master/plugin/sensible.vim > ~/.vimrc'
+        ssh "$identifier" 'curl https://raw.githubusercontent.com/tpope/vim-sensible/master/plugin/sensible.vim > ~/.vimrc'
     fi
 }
 

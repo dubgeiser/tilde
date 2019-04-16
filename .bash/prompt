@@ -29,7 +29,7 @@ has_virtualenv() {
 #
 prompt_fragment_virtualenv() {
     if has_virtualenv; then
-        echo "\[${RED}\]\[${REVERSE}\] $(basename $VIRTUAL_ENV) \[${NORMAL}\] "
+        echo "\[${RED}\]\[${REVERSE}\] $(basename "$VIRTUAL_ENV") \[${NORMAL}\] "
     fi
 }
 
