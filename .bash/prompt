@@ -39,7 +39,7 @@ prompt_fragment_virtualenv() {
 #
 prompt_fragment_cursor_line() {
     if has_virtualenv; then
-        echo "$(prompt_fragment_virtualenv)"
+        prompt_fragment_virtualenv
     else
         echo "\[${REVERSE}\]  \[${NORMAL}\] "
     fi
