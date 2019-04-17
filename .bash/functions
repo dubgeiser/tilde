@@ -137,3 +137,32 @@ prj() {
         cd "$DIR_PROJECTS/$project"
     fi
 }
+
+
+#
+# Execute a drush command on a server via ssh
+#
+# @param The SSH identifier (as exported by domainator).
+# @param The Drush command to execute on the server.
+#
+ssh_drush() {
+    local sshidentifier=$1
+    local drushcmd=$2
+    local sshuser
+
+    sshuser=$(echo "$sshidentifier" | sed -E 's/\.(test|qa|prod)//')
+    ssh "$sshidentifier" 'cd apps/'"$sshuser"'/current && drush '"$drushcmd"''
+}
+
+
+#
+# Shortcut for executing a `drush uli` on a server.
+# uses ssh_drush()
+#
+# @param The SSH identifier (as exported by Domainator).
+#
+uli() {
+    local sshidentifier=$1
+
+    ssh_drush "$sshidentifier" uli
+}
