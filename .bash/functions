@@ -40,12 +40,7 @@ tat() {
         switch='tmux switch-client -t'
     fi
 
-    tmux has-session -t "$project" > /dev/null 2>&1
-    if [ $? != 0 ]; then
-        TMUX='' tmux new-session -s "$project" -d
-
-    fi
-
+    tmux has-session -t "$project" > /dev/null 2>&1 || TMUX='' tmux new-session -s "$project" -d
     $switch "$project"
 }
 
@@ -62,10 +57,12 @@ imgur() {
     # API Key provided by Alan@imgur.com
     local api_key="b3625162d3418ac51a9ee805b1840452"
     local url_api_upload="http://api.imgur.com/2/upload.xml"
+    local fn_image
+    local response
 
-    local fn_image="/tmp/screenshot-`date +%Y-%m-%d-%H-%M-%S`.png"
+    fn_image="/tmp/screenshot-$(date +%Y-%m-%d-%H-%M-%S).png"
     screencapture -ix "$fn_image"
-    local response=`curl -s -F "image=@$fn_image" -F "key=$api_key" $url_api_upload`
+    response=$(curl -s -F "image=@$fn_image" -F "key=$api_key" $url_api_upload)
     echo "$response" | tail -1 | sed -E 's/.*<original>(.*)<\/original>.*/\1/'
 }
 
@@ -132,10 +129,10 @@ ssh_install_default_vimrc() {
 #
 prj() {
     local project
-    project=$(find $DIR_PROJECTS -type d -maxdepth 1 | fzf)
+    project=$(find $DIR_PROJECTS -type d -maxdepth 1 | cut -d/ -f5 | fzf)
     if [[ "$project" != "" ]]
     then
-        cd "$DIR_PROJECTS/$project"
+        cd "$DIR_PROJECTS"/"$project" || return
     fi
 }
 
