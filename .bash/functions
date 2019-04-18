@@ -17,6 +17,9 @@
 # No trailing slash!
 DIR_PROJECTS=~/Projects
 
+# For Mac OSX: use gsed if available.
+SED=$(command -v gsed) || $(command -v sed)
+
 
 #
 # Attach to an existing tmux session, create the session if it doesn't exist.
@@ -63,7 +66,7 @@ imgur() {
     fn_image="/tmp/screenshot-$(date +%Y-%m-%d-%H-%M-%S).png"
     screencapture -ix "$fn_image"
     response=$(curl -s -F "image=@$fn_image" -F "key=$api_key" $url_api_upload)
-    echo "$response" | tail -1 | sed -E 's/.*<original>(.*)<\/original>.*/\1/'
+    echo "$response" | tail -1 | $SED -E 's/.*<original>(.*)<\/original>.*/\1/'
 }
 
 
@@ -97,7 +100,7 @@ ssh_configure_host() {
 # Call whenever ssh host config changes (@see ssh_configure_host)
 #
 ssh_load_autocomplete() {
-    complete -W "$(awk '/^\s*Host\s*/ { sub(/^\s*Host /, ""); print; }' ~/.ssh/config)" ssh uli ssh_drush
+    complete -W "$(awk '/^\s*Host\s*/ { sub(/^\s*Host /, ""); print; }' ~/.ssh/config)" ssh uli ssh_drush ssh_user
 }
 
 
@@ -125,6 +128,18 @@ ssh_install_default_vimrc() {
 
 
 #
+# Return the user for a given SSH identifier.
+#
+ssh_user() {
+    local sshidentifier=$1
+    local hostregex
+
+    hostregex=$(echo "$sshidentifier" | $SED -E 's/\./\\\./')
+    echo $($SED -nE '/^\s*Host\s+'"$hostregex"'/,/^\s*User/p' ~/.ssh/config | grep User | $SED -E 's/^\s*User\s+//')
+}
+
+
+#
 # Change to a project directory quickly, using FZF.
 #
 prj() {
@@ -146,10 +161,14 @@ prj() {
 ssh_drush() {
     local sshidentifier=$1
     local drushcmd=$2
-    local sshuser
+    local appname
 
-    sshuser=$(echo "$sshidentifier" | sed -E 's/\.(test|qa|prod)//')
-    ssh "$sshidentifier" 'cd apps/'"$sshuser"'/current && drush '"$drushcmd"''
+    # Determine the name of the application, based on the ssh identifier.
+    # The name of an application is max 14 chars.
+    appname=$(echo "$sshidentifier" | $SED -E 's/\.(test|qa|prod)//')
+    appname=${appname:0:14}
+
+    ssh "$sshidentifier" 'cd apps/'"$appname"'/current && drush '"$drushcmd"''
 }
 
 
