@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+#
+# Bash configuration
+# PATH, var exports, vars used in .bash/ system, ...
+#
+
+#
+# Path and environment vars.
+#
+export PATH="/usr/local/php5/bin:~/bin:~/.composer/vendor/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/opt/sqlite/bin:$PATH"
+export EDITOR=vim
+export GIT_EDITOR="$EDITOR"
+
+# More common command history, trying not to have duplicates.
+export HISTCONTROL=ignoredups
+shopt -s histappend
+export HISTFILESIZE=10000000
+export HISTSIZE=1000000
+
+export LIQUIBASE_HOME=/usr/local/opt/liquibase/libexec
+
+# Where are projects checked out?
+# No trailing slash!
+DIR_PROJECTS=~/Projects
+
+# For Mac OSX: use gsed if available.
+SED=$(command -v gsed) || $(command -v sed)

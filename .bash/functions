@@ -9,19 +9,6 @@
 
 
 #
-# Shared variables
-# Keep these to a minimum!
-#
-
-# Where are projects checked out?
-# No trailing slash!
-DIR_PROJECTS=~/Projects
-
-# For Mac OSX: use gsed if available.
-SED=$(command -v gsed) || $(command -v sed)
-
-
-#
 # Attach to an existing tmux session, create the session if it doesn't exist.
 # If no session is given, create one based on the current working directory.
 #

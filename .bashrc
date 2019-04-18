@@ -2,6 +2,7 @@
 # .bash_profile will source this .bashrc
 #
 
+. ~/.bash/config
 . ~/.bash/colors
 . ~/.bash/functions
 . ~/.bash/aliases
@@ -12,16 +13,3 @@
 # Apparently when called from .bash/completions, ssh completion does not work?
 # Even though .bash/functions is loaded before .bash/completions.
 ssh_load_autocomplete
-
-# Path and environment vars.
-PATH="/usr/local/php5/bin:~/bin:~/.composer/vendor/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/opt/sqlite/bin:$PATH"
-export EDITOR=vim
-export GIT_EDITOR="$EDITOR"
-
-# Keep more of the command history, keep it common and try not to have duplicates.
-export HISTCONTROL=ignoredups
-shopt -s histappend
-export HISTFILESIZE=10000000
-export HISTSIZE=1000000
-
-export LIQUIBASE_HOME=/usr/local/opt/liquibase/libexec
