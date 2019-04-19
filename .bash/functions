@@ -170,3 +170,16 @@ uli() {
 
     ssh_drush "$sshidentifier" uli
 }
+
+#
+# Copy over a file from the template directory in the current directory.
+# Use FZF to facilitate typing.
+#
+tpl() {
+    local filename
+    filename=$(find $DIR_TEMPLATES -type f | fzf)
+    if [[ "$filename" != "" ]]
+    then
+        cp "$filename" ./
+    fi
+}

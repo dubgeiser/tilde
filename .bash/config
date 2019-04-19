@@ -20,9 +20,20 @@ export HISTSIZE=1000000
 
 export LIQUIBASE_HOME=/usr/local/opt/liquibase/libexec
 
+#
+# Personal config
+#
+
 # Where are projects checked out?
 # No trailing slash!
 DIR_PROJECTS=~/Projects
+
+# Where are the various file templates (.gitignore, .editorconfig, ...)
+DIR_TEMPLATES=~/Documents/templates/
+
+#
+# Which commands.
+#
 
 # For Mac OSX: use gsed if available.
 SED=$(command -v gsed) || $(command -v sed)
