@@ -12,7 +12,7 @@
 # Attach to an existing tmux session, create the session if it doesn't exist.
 # If no session is given, create one based on the current working directory.
 #
-tat() {
+tmux_attach() {
     local project=$1
     local switch=""
 
@@ -129,7 +129,7 @@ ssh_user() {
 #
 # Change to a project directory quickly, using FZF.
 #
-prj() {
+goto_project() {
     local project
     project=$(find $DIR_PROJECTS -type d -maxdepth 1 | cut -d/ -f5 | fzf)
     if [[ "$project" != "" ]]

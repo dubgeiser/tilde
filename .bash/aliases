@@ -29,5 +29,5 @@ alias daystill="python -c 'from datetime import date; print \"Nog %sX slapen.\" 
 # TODO Replace "Default" with the actual profile name if possible.
 alias restoretitle="echo -ne \"\e]1;Default\a\""
 
-alias t=tat
-alias w=prj
+alias t=tmux_attach
+alias w=goto_project
