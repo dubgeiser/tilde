@@ -150,12 +150,18 @@ ssh_drush() {
     local drushcmd=$2
     local appname
 
-    # Determine the name of the application, based on the ssh identifier.
-    # The name of an application is max 14 chars.
-    appname=$(echo "$sshidentifier" | $SED -E 's/\.(test|qa|prod)//')
-    appname=${appname:0:14}
+    if [[ "$sshidentifier" == "" ]] || [[ "$drushcmd" == "" ]]
+    then
+        echo "usage: ssh_drush <identifier> <drush command>"
+    else
 
-    ssh "$sshidentifier" 'cd apps/'"$appname"'/current && drush '"$drushcmd"''
+        # Determine the name of the application, based on the ssh identifier.
+        # The name of an application is max 14 chars.
+        appname=$(echo "$sshidentifier" | $SED -E 's/\.(test|qa|prod)//')
+        appname=${appname:0:14}
+
+        ssh "$sshidentifier" 'cd apps/'"$appname"'/current && drush '"$drushcmd"''
+    fi
 }
 
 
