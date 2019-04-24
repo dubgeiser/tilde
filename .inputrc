@@ -1,3 +1,12 @@
+# When completing, look at what already has been typed and use that as a base.
+# This mimics history up/down in Vim.
+"\C-n": history-search-forward
+"\C-p": history-search-backward
+
+# Complete the same way when using the arrow up/down keys.
+"\e[B": history-search-forward
+"\e[A": history-search-backward
+
 # TAB auto completion case insensitive
 set completion-ignore-case on
 
