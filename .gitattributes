@@ -1,0 +1,2 @@
+makefile text          whitespace=-tab-in-indent
+Makefile text          whitespace=-tab-in-indent

@@ -3,6 +3,7 @@
 [core]
     excludesfile = ~/.gitignore-global
     whitespace = tab-in-indent diff --check,tab-in-indent
+    attributesfile = ~/.gitattributes
 
 [include]
     path = .gitconfig-user
