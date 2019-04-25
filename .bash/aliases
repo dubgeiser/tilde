@@ -31,3 +31,8 @@ alias restoretitle="echo -ne \"\e]1;Default\a\""
 
 alias t=tmux_attach
 alias w=goto_project
+
+# Generate ctags file for Vim in a Drupal 7 project.
+# For Drupal 8 and other PHP project using composer (and Git), PHPhactor works
+# just fine.
+alias generate_tags='ctags --langmap=php:.engine.inc.module.theme.install.php --php-kinds=cdfi --languages=php --recurse --fields=+l'
