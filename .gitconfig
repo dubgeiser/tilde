@@ -17,8 +17,17 @@
 
 [alias]
     aa = add --all
-    amend = commit --amend
     au = add --update
+    amend = commit --amend
+    recommit = commit --amend --no-edit
+
+    # Note that this will not uncommit the very first commit in the repo.
+    # Use `git update-ref -d HEAD` for that.
+    uncommit = reset --soft HEAD^
+
+    # 'unstage' just makes more sense in my mind.
+    unstage = reset
+
     co = checkout
     dc = diff --cached
     info = "!echo && git remote -v && echo && git branch -a"
