@@ -29,7 +29,7 @@ has_virtualenv() {
 #
 prompt_fragment_virtualenv() {
     if has_virtualenv; then
-        echo "\[${RED}\]\[${REVERSE}\] $(basename "$VIRTUAL_ENV") \[${NORMAL}\] "
+        echo "\[${RED}\]\[${REVERSE}\] $(basename "$VIRTUAL_ENV") \[${NORMAL}\]"
     fi
 }
 
@@ -38,18 +38,14 @@ prompt_fragment_virtualenv() {
 # The fragment in the prompt at the line the cursor is on.
 #
 prompt_fragment_cursor_line() {
-    if has_virtualenv; then
-        prompt_fragment_virtualenv
-    else
-        echo "\[${REVERSE}\]  \[${NORMAL}\] "
-    fi
+    echo "\[${NORMAL}\]$ "
 }
 
 
 # Thanks @janmoesen for pointing me to the \[\] surrounding the non-printing
 # chars.  These are necessary to prevent issues with command line editing,
 # -browsing, -completion.
-PROMPT_COMMAND='__git_ps1 "\[${BOLD}\]\[${REVERSE}\] \w \[${NORMAL}\]" " [\$?]\n$(prompt_fragment_cursor_line)"'
+PROMPT_COMMAND='__git_ps1 "\[${REVERSE}\]\[${BOLD}\]\[${POWDER_BLUE}\]-----[ \t ][ \$? ]\[${NORMAL}\]$(prompt_fragment_virtualenv) \w" "\n$(prompt_fragment_cursor_line)"'
 INITIAL_PROMPT_COMMAND=$PROMPT_COMMAND
 
 
