@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+#
+# Check the request 'Accept-language' header versus the 'Content-language'
+# response header for a given url and a list of languages to compare.
+#
+
+url=https://example.com/
+accept_languages=(nl en es de fr)
+
+for accept_language in ${accept_languages[*]};
+do
+    contentlanguage=$(curl -ILs --header "Accept-language: $accept_language" $url | grep 'Content-language' | sed 's/Content-language: //')
+    echo -n "Testing $accept_language -> "
+    echo "${contentlanguage}"
+done
