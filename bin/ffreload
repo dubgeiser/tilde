@@ -1,4 +1,7 @@
 #!/usr/bin/env osascript
 
+tell application "System Events" to set savedApplication to name of first application process whose frontmost is true
+
 activate application "Firefox"
 tell application "System Events" to keystroke "r" using command down
+activate application savedApplication
