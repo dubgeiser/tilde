@@ -29,7 +29,7 @@ export LIQUIBASE_HOME=/usr/local/opt/liquibase/libexec
 DIR_PROJECTS=~/Projects
 
 # Where are the various file templates (.gitignore, .editorconfig, ...)
-DIR_TEMPLATES=~/Documents/templates/
+DIR_TEMPLATES=~/templates/
 
 #
 # Which commands.

@@ -1,0 +1,17 @@
+.DS_Store
+.build/
+.buildpath
+.cache
+.idea
+.project
+.settings
+*.pyc
+build/
+tags
+!tags/
+tmp/
+vendor/
+app/cache/*
+app/logs/*
+app/config/parameters.yml
+
