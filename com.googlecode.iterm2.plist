@@ -607,9 +607,9 @@
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>960 0 960 1057 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 349 970 678 0 0 1680 1027 </string>
+	<string>950 400 970 657 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>708 0 970 678 0 0 1680 1027 </string>
+	<string>947 21 970 657 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>254 0 970 678 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
@@ -957,7 +957,7 @@
 			<key>Guid</key>
 			<string>D29FBA2B-8E7E-493B-B245-91245AE325D6</string>
 			<key>Horizontal Spacing</key>
-			<real>1</real>
+			<real>0.91000000000000003</real>
 			<key>Icon</key>
 			<integer>0</integer>
 			<key>Idle Code</key>
@@ -1648,7 +1648,7 @@
 			<key>Use Non-ASCII Font</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>1</real>
+			<real>0.95999999999999996</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
@@ -2403,6 +2403,7 @@
 	<true/>
 	<key>NoSyncBFPRecents</key>
 	<array>
+		<string>Inconsolata</string>
 		<string>IBM Plex Mono</string>
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
@@ -2431,7 +2432,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>559034475.86420906</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>76</integer>
+	<integer>87</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -3214,7 +3215,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.0beta5</string>
+	<string>3.3.0beta6</string>
 	<key>kCPFavoritesUserDefaultsKey</key>
 	<array>
 		<data>
