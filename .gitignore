@@ -13,6 +13,7 @@ default-soapui-workspace.xml
 /.awssecret
 /.bash_history
 /.bash_sessions/
+/.bashrc_private
 /.berkshelf/
 /.bundle/
 /.cache/

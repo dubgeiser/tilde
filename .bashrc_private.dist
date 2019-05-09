@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+SLACK_URL_HOOK=https://hooks.slack.com/services/blabla/bloblo/hashhash
+SLACK_USER=username
+SLACK_CHANNEL='SLACKCHANNEL'
+
+alias slackmessage="~/bin/slackmessage -h $SLACK_URL_HOOK -u $SLACK_USER -c $SLACK_CHANNEL"
