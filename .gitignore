@@ -54,6 +54,7 @@ default-soapui-workspace.xml
 /.psql_history
 /.pylint.d
 /.python_history
+/.rnd
 /.slocdata/
 /.sonar/
 /.sqlite_history
