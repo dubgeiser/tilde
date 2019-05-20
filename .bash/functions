@@ -189,3 +189,16 @@ tpl() {
         cp "$filename" ./
     fi
 }
+
+#
+# Make g function as an alias for git.
+# Show a short status by default.
+#
+g() {
+    if [[ $# > 0 ]]
+    then
+        git $@
+    else
+        git s
+    fi
+}
