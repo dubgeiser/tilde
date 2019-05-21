@@ -1,0 +1,10 @@
+#!/bin/sh
+
+#
+# Git command to check out a specific pull request.
+#
+
+set -e
+
+git fetch origin "pull/$1/head:pr/$1"
+git checkout "pr/$1"
