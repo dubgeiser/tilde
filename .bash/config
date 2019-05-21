@@ -8,7 +8,7 @@
 #
 # Path and environment vars.
 #
-export PATH="/usr/local/php5/bin:~/bin:~/.composer/vendor/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/opt/sqlite/bin:$PATH"
+export PATH="/usr/local/php5/bin:$HOME/bin:$HOME/.composer/vendor/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/opt/sqlite/bin:$PATH"
 export EDITOR=vim
 export GIT_EDITOR="$EDITOR"
 
@@ -26,10 +26,10 @@ export LIQUIBASE_HOME=/usr/local/opt/liquibase/libexec
 
 # Where are projects checked out?
 # No trailing slash!
-DIR_PROJECTS=~/Projects
+DIR_PROJECTS=$HOME/Projects
 
 # Where are the various file templates (.gitignore, .editorconfig, ...)
-DIR_TEMPLATES=~/templates/
+DIR_TEMPLATES=$HOME/templates/
 
 #
 # Which commands.
