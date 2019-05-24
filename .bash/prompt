@@ -6,7 +6,8 @@
 #
 
 
-# GIT prompt configuration
+# GIT prompt configuration, used by __git_ps1, so the _are_ used.
+# shellcheck disable=SC2034
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1

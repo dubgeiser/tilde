@@ -131,7 +131,7 @@ ssh_user() {
 #
 goto_project() {
     local project
-    project=$(find $DIR_PROJECTS -type d -maxdepth 1 | cut -d/ -f5 | fzf)
+    project=$(find "$DIR_PROJECTS" -type d -maxdepth 1 | cut -d/ -f5 | fzf)
     if [[ "$project" != "" ]]
     then
         cd "$DIR_PROJECTS"/"$project" || return
@@ -183,7 +183,7 @@ uli() {
 #
 tpl() {
     local filename
-    filename=$(find $DIR_TEMPLATES -type f | fzf)
+    filename=$(find "$DIR_TEMPLATES" -type f | fzf)
     if [[ "$filename" != "" ]]
     then
         cp "$filename" ./
@@ -195,7 +195,7 @@ tpl() {
 # Show a short status by default.
 #
 g() {
-    if [[ $# > 0 ]]
+    if [[ $# -gt 0 ]]
     then
         git "$@"
     else
