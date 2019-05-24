@@ -65,7 +65,6 @@ default-soapui-workspace.xml
 /.vagrant.d/
 /.vim/
 /.viminfo
-/.vimrc
 /.wget-hsts
 /.wireshark
 /.wireshark-etc
