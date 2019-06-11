@@ -156,8 +156,13 @@ ssh_drush() {
     else
 
         # Determine the name of the application, based on the ssh identifier.
+        #
+        # Strip out '-' because this is also done to the appname on the server.
+        # Ex: 'this-app.prod' will reside under '~/apps/thisapp/current' on the
+        # production server.
+        appname=$(echo "$sshidentifier" | $SED -E 's/\.(test|qa|prod)//' | $SED -E 's/-//')
+
         # The name of an application is max 14 chars.
-        appname=$(echo "$sshidentifier" | $SED -E 's/\.(test|qa|prod)//')
         appname=${appname:0:14}
 
         ssh "$sshidentifier" 'cd apps/'"$appname"'/current && drush '"$drushcmd"''
