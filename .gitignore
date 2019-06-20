@@ -39,6 +39,7 @@ default-soapui-workspace.xml
 /.iterm2
 /.iterm2_shell_integration.bash
 /.lesshst
+/.lnav
 /.local/
 /.locks/
 /.mysql_history
