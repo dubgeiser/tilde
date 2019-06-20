@@ -15,6 +15,9 @@ GIT_PS1_SHOWUPSTREAM="auto"
 GIT_PS1_SHOWCOLORHINTS=1
 
 
+#
+# Whether or not we have a Python virtual environment (venv) running.
+#
 has_virtualenv() {
     if test -n "$VIRTUAL_ENV"; then
         return 0
@@ -43,10 +46,31 @@ prompt_fragment_cursor_line() {
 }
 
 
+#
+# Fragment in the prompt that shows the current timestamp.
+#
+prompt_fragment_timestamp() {
+    echo "\[${REVERSE}\]\[${BOLD}\]\[${POWDER_BLUE}\] \t \[${NORMAL}\]"
+}
+
+
+prompt_fragment_exit_code() {
+    echo "\[${REVERSE}\]\[${BOLD}\]\[${CYAN}\] \$? \[${NORMAL}\]"
+}
+
+
+#
+# Fragment in the prompt showing the current working directory.
+#
+prompt_fragment_cwd() {
+    echo "\[${REVERSE}\]\[${BOLD}\] \w \[${NORMAL}\]"
+}
+
+
 # Thanks @janmoesen for pointing me to the \[\] surrounding the non-printing
 # chars.  These are necessary to prevent issues with command line editing,
 # -browsing, -completion.
-PROMPT_COMMAND='__git_ps1 "\[${REVERSE}\]\[${BOLD}\]\[${POWDER_BLUE}\]-----[ \t ][ \$? ]\[${NORMAL}\]$(prompt_fragment_virtualenv) \[${BOLD}\]\w" "\n$(prompt_fragment_cursor_line)"'
+PROMPT_COMMAND='__git_ps1 "$(prompt_fragment_timestamp)$(prompt_fragment_exit_code)$(prompt_fragment_cwd)$(prompt_fragment_virtualenv)" "\n$(prompt_fragment_cursor_line)"'
 INITIAL_PROMPT_COMMAND=$PROMPT_COMMAND
 
 
