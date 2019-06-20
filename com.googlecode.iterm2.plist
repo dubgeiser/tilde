@@ -609,7 +609,7 @@
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>960 0 960 1057 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>950 400 970 657 0 0 1920 1057 </string>
+	<string>950 400 970 656 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>947 21 970 657 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -908,15 +908,15 @@
 			<key>Cursor Guide Color</key>
 			<dict>
 				<key>Alpha Component</key>
-				<real>0.25</real>
-				<key>Blue Component</key>
 				<real>1</real>
+				<key>Blue Component</key>
+				<real>0.21176470588235294</real>
 				<key>Color Space</key>
-				<string>Calibrated</string>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.9100000262260437</real>
+				<real>0.2196078431372549</real>
 				<key>Red Component</key>
-				<real>0.64999997615814209</real>
+				<real>0.23921568627450981</real>
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
@@ -2419,9 +2419,9 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.0beta10</string>
 		<string>3.3.0beta11</string>
 		<string>3.3.0beta12</string>
+		<string>3.3.0beta10</string>
 	</array>
 	<key>NoSyncAutoBurialReveal</key>
 	<true/>
@@ -2441,7 +2441,7 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1920, 1080}}</string>
 		<key>topLeft</key>
-		<string>{178, 871}</string>
+		<string>{577, 857}</string>
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
@@ -2456,7 +2456,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>559034475.86420906</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>126</integer>
+	<integer>127</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -4286,6 +4286,6 @@
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
-	<false/>
+	<true/>
 </dict>
 </plist>
