@@ -83,7 +83,7 @@ INITIAL_PROMPT_COMMAND=$PROMPT_COMMAND
 # will take _seconds_ before it appears.
 #
 prompt_simple() {
-    PROMPT_COMMAND='PS1="\[${REVERSE}\] \w \[${NORMAL}\] [\$?]\n"'
+    PROMPT_COMMAND='PS1="$(prompt_fragment_cwd)$(prompt_fragment_exit_code)\n"'
 }
 
 
