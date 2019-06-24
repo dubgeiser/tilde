@@ -26,14 +26,14 @@ export LIQUIBASE_HOME=/usr/local/opt/liquibase/libexec
 
 # Where are projects checked out?
 # No trailing slash!
-DIR_PROJECTS=$HOME/Projects
+export DIR_PROJECTS=$HOME/Projects
 
 # Where are the various file templates (.gitignore, .editorconfig, ...)
-DIR_TEMPLATES=$HOME/templates/
+export DIR_TEMPLATES=$HOME/templates/
 
 #
 # Which commands.
 #
 
 # For Mac OSX: use gsed if available.
-SED=$(command -v gsed) || $(command -v sed)
+export SED=$(command -v gsed) || $(command -v sed)
