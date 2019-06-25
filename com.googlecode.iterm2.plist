@@ -566,6 +566,11 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
+	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
+	<array>
+		<string>0.000000, 0.000000, 224.000000, 258.000000, NO, NO</string>
+		<string>0.000000, 259.000000, 224.000000, 48.000000, NO, NO</string>
+	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -609,9 +614,9 @@
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>960 0 960 1057 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>950 400 970 656 0 0 1920 1057 </string>
+	<string>710 370 970 656 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>947 21 970 657 0 0 1920 1057 </string>
+	<string>947 21 970 656 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>254 0 970 678 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
@@ -1288,7 +1293,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>IBMPlexMono-Light 16</string>
+			<string>IBMPlexMono-Light 18</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Place Prompt at First Column</key>
@@ -2419,9 +2424,10 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.0beta11</string>
-		<string>3.3.0beta12</string>
 		<string>3.3.0beta10</string>
+		<string>3.3.0beta13</string>
+		<string>3.3.0beta12</string>
+		<string>3.3.0beta11</string>
 	</array>
 	<key>NoSyncAutoBurialReveal</key>
 	<true/>
@@ -2441,7 +2447,7 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1920, 1080}}</string>
 		<key>topLeft</key>
-		<string>{577, 857}</string>
+		<string>{1005, 966}</string>
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
@@ -2456,7 +2462,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>559034475.86420906</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>127</integer>
+	<integer>146</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -3323,7 +3329,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.0beta12</string>
+	<string>3.3.0beta13</string>
 	<key>kCPFavoritesUserDefaultsKey</key>
 	<array>
 		<data>
