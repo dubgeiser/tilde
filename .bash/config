@@ -37,3 +37,6 @@ export DIR_TEMPLATES=$HOME/templates/
 
 # For Mac OSX: use gsed if available.
 export SED=$(command -v gsed) || $(command -v sed)
+
+# Default FZF preview mode (see tpl() and goto_project() in .bash/function)
+export FZF_PREVIEW='fzf-tmux --multi --preview-window right:60% --preview'

@@ -131,7 +131,7 @@ ssh_user() {
 #
 goto_project() {
     local project
-    project=$(find "$DIR_PROJECTS" -type d -maxdepth 1 | cut -d/ -f5 | fzf --preview "ls $DIR_PROJECTS/{}")
+    project=$(find "$DIR_PROJECTS" -type d -maxdepth 1 | cut -d/ -f5 | $FZF_PREVIEW "ls $DIR_PROJECTS/{}")
     if [[ "$project" != "" ]]
     then
         cd "$DIR_PROJECTS"/"$project" || return
@@ -188,7 +188,7 @@ uli() {
 #
 tpl() {
     local filename
-    filename=$(find "$DIR_TEMPLATES" -type f | fzf --preview 'head -30 {}')
+    filename=$(find "$DIR_TEMPLATES" -type f | $FZF_PREVIEW 'head -30 {}')
     if [[ "$filename" != "" ]]
     then
         cp "$filename" ./
