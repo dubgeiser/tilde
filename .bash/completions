@@ -14,6 +14,16 @@
 #   complete -o default -o nospace -F _git g
 #
 
+
+#
+# adds ~/.ssh/config to the ssh autocomplete
+# Call whenever ssh host config changes (@see ssh_configure_host)
+#
+ssh_load_autocomplete() {
+    complete -W "$(awk '/^\s*Host\s*/ { sub(/^\s*Host /, ""); print; }' ~/.ssh/{config,digipolis-hosts})" ssh uli ssh_drush ssh_user
+}
+
+
 complete -o default -o nospace -F _git g
 
 homebrew_completions=/usr/local/etc/bash_completion.d
@@ -37,3 +47,8 @@ fi
 [[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.bash" 2> /dev/null
 source "/usr/local/opt/fzf/shell/key-bindings.bash"
 export FZF_DEFAULT_OPTS='--color=dark'
+
+# ssh host completion is dynamic.
+# Apparently when called from .bash/completions, ssh completion does not work?
+# Even though .bash/functions is loaded before .bash/completions.
+ssh_load_autocomplete

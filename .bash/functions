@@ -83,15 +83,6 @@ ssh_configure_host() {
 
 
 #
-# adds ~/.ssh/config to the ssh autocomplete
-# Call whenever ssh host config changes (@see ssh_configure_host)
-#
-ssh_load_autocomplete() {
-    complete -W "$(awk '/^\s*Host\s*/ { sub(/^\s*Host /, ""); print; }' ~/.ssh/{config,digipolis-hosts})" ssh uli ssh_drush ssh_user
-}
-
-
-#
 # Test a giveh ssh_config host identifier.
 #
 ssh_test_key() {
