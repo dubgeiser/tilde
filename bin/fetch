@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+#
+# Script to copy over apache access logs from a remote server with a particular
+# setup.
+#
+
+# printf compatible string of how the log files are named.
+# Needs a %d for street, and %02d for month and day (year not yet supported).
+fileformat="domain_street_%d_access.log-2019%02d%02d.gz\n"
+
+# printf compatible string of how the servers are named.
+# Needs a %s for denoting the different servers.
+serverformat="server.web-%s.domain"
+
+# Where the log files will be copied to.
+# No trailing slash!
+destination=~/SOME/FOLDER
+
+for server in "005" "006" "007"
+do
+    for straat in 1 2
+    do
+        for month in 6
+        do
+            for day in {1..31}
+            do
+                sshserver=$(printf $serverformat $server)
+                fn=$(printf $fileformat $straat $month $day)
+                fndestination="$destination/$sshserver-$fn"
+                cmd="scp $sshserver:apache_logs/$fn $fndestination"
+                [ ! -f "$fndestination" ] && $cmd
+            done;
+        done;
+    done;
+done;
