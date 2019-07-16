@@ -47,8 +47,7 @@ def usage():
 OPTIONS
         --host=<localdomain>
         --port=<port number>
-        --path=<path to save mails>
-        --background"""
+        --path=<path to save mails>"""
 
 
 def quit(reason=None):
@@ -77,7 +76,7 @@ def handle_signals():
 def read_command_line():
     try:
         optlist, args = getopt.getopt(
-            sys.argv[1:], "", ["host=", "port=", "path=", "background"])
+            sys.argv[1:], "", ["host=", "port=", "path="])
     except getopt.GetoptError:
         usage()
         sys.exit(2)
@@ -85,7 +84,6 @@ def read_command_line():
     host = "localhost"
     port = 8025
     path = os.getcwd()
-    background = False
     for opt, arg in optlist:
         if opt == "--host":
             host = arg
@@ -93,42 +91,14 @@ def read_command_line():
             port = int(arg)
         elif opt == "--path":
             path = arg
-        elif opt == "--background":
-            background = True
-    return host, port, path, background
-
-
-def become_daemon():
-    # See "Python Standard Library", pg. 29, O'Reilly, for more
-    # info on the following.
-    try:
-        pid = os.fork()
-    except AttributeError:
-        print("INFO: --background is unsupported on this platform")
-        if sys.platform.find("win") >= 0:
-            print("INFO: Start %s with pythonw.exe instead" % script_name())
-    else:
-        if pid:  # we're the parent if pid is set
-            os._exit(0)
-        os.setpgrp()
-        os.umask(0)
-
-        class DevNull:
-            def write(self, message):
-                pass
-
-        sys.stdin.close()
-        sys.stdout = DevNull()
-        sys.stderr = DevNull()
+    return host, port, path
 
 
 def main():
     global progname
     handle_signals()
-    host, port, path, background = read_command_line()
+    host, port, path = read_command_line()
     message("Starting %s" % progname)
-    if background:
-        become_daemon()
     try:
         server = FakeServer((host, port), None, path)
     except socket.error, e:
