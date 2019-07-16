@@ -51,8 +51,7 @@ OPTIONS
 
 
 def quit(reason=None):
-    global progname
-    text = "Stopping %s" % progname
+    text = "Stopping %s" % script_name()
     if reason is not None:
         text += ": %s" % reason
     message(text)
@@ -95,10 +94,9 @@ def read_command_line():
 
 
 def main():
-    global progname
     handle_signals()
     host, port, path = read_command_line()
-    message("Starting %s" % progname)
+    message("Starting %s" % script_name())
     try:
         server = FakeServer((host, port), None, path)
     except socket.error, e:
@@ -111,5 +109,4 @@ def main():
 
 
 if __name__ == "__main__":
-    progname = os.path.basename(sys.argv[0])
     main()
