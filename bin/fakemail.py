@@ -48,7 +48,6 @@ OPTIONS
         --host=<localdomain>
         --port=<port number>
         --path=<path to save mails>
-        --log=<optional file to append messages to>
         --background"""
 
 
@@ -61,17 +60,8 @@ def quit(reason=None):
     sys.exit()
 
 
-log_file = None
-
-
 def message(text):
-    global log_file
-    if log_file is not None:
-        f = file(log_file, "a")
-        f.write(text + "\n")
-        f.close()
-    else:
-        print text
+    print text
 
 
 def handle_signals():
@@ -85,10 +75,9 @@ def handle_signals():
 
 
 def read_command_line():
-    global log_file
     try:
         optlist, args = getopt.getopt(
-            sys.argv[1:], "", ["host=", "port=", "path=", "log=", "background"])
+            sys.argv[1:], "", ["host=", "port=", "path=", "background"])
     except getopt.GetoptError:
         usage()
         sys.exit(2)
@@ -104,8 +93,6 @@ def read_command_line():
             port = int(arg)
         elif opt == "--path":
             path = arg
-        elif opt == "--log":
-            log_file = arg
         elif opt == "--background":
             background = True
     return host, port, path, background
