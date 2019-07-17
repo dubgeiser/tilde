@@ -1,0 +1,50 @@
+#!/usr/bin/env python3
+
+""" Script to download the ssh_config for all of our servers.
+
+Quick thingie, no error checking or whatever.
+Output the result to ~/.ssh/digipolis-hosts
+
+"""
+
+from getpass import getpass
+import os
+
+import requests
+
+
+# Url of the login form
+url_login = "https://domainator.gentgrp.gent.be/login"
+
+# Url of the SSH config (as download).
+url_ssh_config = "https://domainator.gentgrp.gent.be/export/ssh-config/download"
+
+# The default user name.
+username_default = "per.juchtmans@digipolis.gent"
+
+# Where to store the SSH config when fetched
+fn_ssh_config = os.path.join(os.environ["HOME"], ".ssh/digipolis-hosts")
+
+# The names of the username- and password form fields in the login form.
+ff_username = "security_login_form[email]"
+ff_password = "security_login_form[password]"
+
+# Get credentials: username and password
+username = input(f"Username/email [{username_default}]: ")
+if not username:
+    username = username_default
+password = getpass(f"Password for {username}: ")
+
+# make it a payload to pass to a requests.post() call
+payload = {
+        ff_username : username,
+        ff_password : password,
+        }
+
+# Use `with requests.Session()` to make sure the session will be closed.
+with requests.Session() as s:
+    s.post(url_login, data=payload, verify=False)
+    sshconfig = s.get(url_ssh_config).text
+    f = open(fn_ssh_config, "w")
+    f.write(sshconfig)
+    f.close()
