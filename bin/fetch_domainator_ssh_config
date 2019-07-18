@@ -13,6 +13,10 @@ import os
 import requests
 
 
+def login_accepted(response):
+    return not (ff_username in response.text or ff_password in response.text)
+
+
 # Url of the login form
 url_login = "https://domainator.gentgrp.gent.be/login"
 
@@ -29,22 +33,30 @@ fn_ssh_config = os.path.join(os.environ["HOME"], ".ssh/digipolis-hosts")
 ff_username = "security_login_form[email]"
 ff_password = "security_login_form[password]"
 
-# Get credentials: username and password
-username = input(f"Username/email [{username_default}]: ")
-if not username:
-    username = username_default
-password = getpass(f"Password for {username}: ")
 
-# make it a payload to pass to a requests.post() call
-payload = {
-        ff_username : username,
-        ff_password : password,
-        }
+s = requests.Session()
+# put in try-catch with keyboardinterrupt exception
+# Always make sure http session gets closed.
+while True:
+    # Get credentials: username and password
+    username = input(f"Username/email [{username_default}]: ")
+    if not username:
+        username = username_default
+    password = getpass(f"Password for {username}: ")
 
-# Use `with requests.Session()` to make sure the session will be closed.
-with requests.Session() as s:
-    s.post(url_login, data=payload, verify=False)
-    sshconfig = s.get(url_ssh_config).text
-    f = open(fn_ssh_config, "w")
-    f.write(sshconfig)
-    f.close()
+    # make it a payload to pass to a requests.post() call
+    payload = {
+            ff_username : username,
+            ff_password : password,
+            }
+    r = s.post(url_login, data=payload, verify=False)
+    if login_accepted(r):
+        break
+    else:
+        print("Could not log in, please try again")
+
+sshconfig = s.get(url_ssh_config).text
+s.close()
+f = open(fn_ssh_config, "w")
+f.write(sshconfig)
+f.close()
