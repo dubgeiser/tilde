@@ -60,3 +60,5 @@ s.close()
 f = open(fn_ssh_config, "w")
 f.write(sshconfig)
 f.close()
+
+print("\n\n\n*** Don't forget to `ssh_load_autocomplete`! ***\n")
