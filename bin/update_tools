@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+update_brew() {
+    brew upgrade
+    brew cask upgrade --greedy
+}
+
+update_global_composer() {
+    composer global update
+}
+
+update_vim() {
+    cd "$HOME"/.vim/ || (echo 'CANNOT CD TO VIM DIRECTORY' && exit 1)
+    ./update
+}
+
+pushd "$(pwd)" || (echo 'CANNOT PUSH WORKING DIR TO THE DIRSTACK' && exit 1)
+update_brew
+update_global_composer
+update_vim
+popd || (echo 'CANNOT POP FROM DIRSTACK' && exit 1)
