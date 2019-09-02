@@ -5,6 +5,14 @@ update_brew() {
     brew cask upgrade --greedy
 }
 
+brew_check_for_updates() {
+    brew update
+    echo
+    echo cask
+    echo '----'
+    brew cask outdated --greedy
+}
+
 update_global_composer() {
     composer global update
 }
@@ -15,7 +23,7 @@ update_vim() {
 }
 
 pushd "$(pwd)" || (echo 'CANNOT PUSH WORKING DIR TO THE DIRSTACK' && exit 1)
-update_brew
 update_global_composer
 update_vim
+brew_check_for_updates
 popd || (echo 'CANNOT POP FROM DIRSTACK' && exit 1)
