@@ -38,6 +38,7 @@ default-soapui-workspace.xml
 /.irssi
 /.iterm2
 /.iterm2_shell_integration.bash
+/.jssc/
 /.lesshst
 /.lnav
 /.local/
