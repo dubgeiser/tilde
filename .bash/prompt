@@ -73,7 +73,7 @@ prompt_fragment_cwd() {
 # Thanks @janmoesen for pointing me to the \[\] surrounding the non-printing
 # chars.  These are necessary to prevent issues with command line editing,
 # -browsing, -completion.
-PROMPT_COMMAND='__git_ps1 "$(prompt_fragment_timestamp)$(prompt_fragment_exit_code)$(prompt_fragment_cwd)$(prompt_fragment_virtualenv)" "\n$(prompt_fragment_cursor_line)"'
+PROMPT_COMMAND='declare -F __git_ps1 &>/dev/null && __git_ps1 "$(prompt_fragment_timestamp)$(prompt_fragment_exit_code)$(prompt_fragment_cwd)$(prompt_fragment_virtualenv)" "\n$(prompt_fragment_cursor_line)"'
 INITIAL_PROMPT_COMMAND=$PROMPT_COMMAND
 
 
