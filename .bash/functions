@@ -36,28 +36,6 @@ tmux_attach() {
 
 
 #
-# Upload a screenshot to imgur "on the fly":
-# Let user select region, take screenshot
-# Upload screenshot to imgur.com
-# Print resulting url to image.
-#
-# @see http://api.imgur.com/examples
-#
-imgur() {
-    # API Key provided by Alan@imgur.com
-    local api_key="b3625162d3418ac51a9ee805b1840452"
-    local url_api_upload="http://api.imgur.com/2/upload.xml"
-    local fn_image
-    local response
-
-    fn_image="/tmp/screenshot-$(date +%Y-%m-%d-%H-%M-%S).png"
-    screencapture -ix "$fn_image"
-    response=$(curl -s -F "image=@$fn_image" -F "key=$api_key" $url_api_upload)
-    echo "$response" | tail -1 | $SED -E 's/.*<original>(.*)<\/original>.*/\1/'
-}
-
-
-#
 # Create an SSH config host entry and add my public key to that host.
 #
 # @param The identifier to use for this SSH host configuration.
