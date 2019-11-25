@@ -28,5 +28,4 @@ server:
 
 # Watch the source files for changes and build.
 watcher:
-	fswatch -l 0.2 -o $(SRC) | xargs -n1 -I{} $(MAKE)
-
+	ls $(SRC) | entr $(MAKE)
