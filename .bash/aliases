@@ -22,13 +22,6 @@ alias ym='~/bin/ym $(aws ls -1 yermama | fzf) | pbcopy'
 # TODO configurable dates?
 alias daystill="python -c 'from datetime import date; print \"Nog %sX slapen.\" % (date(2019,3,1) - date.today()).days'"
 
-# When ssh'ing into a server, the window title and the tab title are changed to
-# the ssh server and user etc... but when logging out of the server, the tab and
-# window do not restore.  This alias does that.
-# "Default" is the name of the default iTerm2 profile.
-# TODO Replace "Default" with the actual profile name if possible.
-alias restoretitle="echo -ne \"\e]1;Default\a\""
-
 alias t=tmux_attach
 alias w=goto_project
 alias e=mvim
