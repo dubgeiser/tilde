@@ -58,7 +58,7 @@ prompt_fragment_timestamp() {
 # Fragment in the prompt showing the exit code of the previous executed command.
 #
 prompt_fragment_exit_code() {
-    echo "\[${REVERSE}\]\[${BOLD}\]\[${CYAN}\] \$? \[${NORMAL}\]"
+    echo "\[${REVERSE}\]\[${BOLD}\]\[${BLUE}\] \$? \[${NORMAL}\]"
 }
 
 
