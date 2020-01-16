@@ -10,3 +10,4 @@
 . ~/.bash/completions
 . ~/.bash/prompt
 . ~/.bashrc_private
+. ~/Library/Preferences/org.dystroy.broot/launcher/bash/br
