@@ -68,6 +68,7 @@ default-soapui-workspace.xml
 /.wget-hsts
 /.wireshark
 /.wireshark-etc
+/.yarnrc
 /package-lock.json
 
 /Applications/
