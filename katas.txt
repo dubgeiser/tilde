@@ -42,10 +42,10 @@ invalid inputs for this kata
    allowed” - and the negative that was passed.if there are multiple
    negatives, show all of them in the exception message
 
-===============================================================================
+-------------------------------------------------------------------------------
 Stop here if you are a beginner. Continue if you can finish the steps so far
 in less than 30 minutes.
-===============================================================================
+-------------------------------------------------------------------------------
 
 6. Numbers bigger than 1000 should be ignored, so adding 2 + 1001  = 2
 
@@ -57,6 +57,27 @@ in less than 30 minutes.
 
 9. make sure you can also handle multiple delimiters with length longer than
    one char
+
+
+==============================================================================
+                                Bounded Stack
+==============================================================================
+
+1. Implement a bounded stack using basic array.
+   The stack is bounded by the number of elements it can handle, defined when
+   constructing the stack.
+   Try not to rely on language-specific array implementations for manipulating
+   the stack.  (ex. do not use array_pop() etc... in PHP)
+
+2. push() pushes an element on the stack.
+   Trying to push more elements than the upper bounds onto the stack will
+   yield an OutOfBoundsError.
+
+3. pop() pops the last pushed element off the stack.
+   Popping an empty stack will yield an EmptyStackError.
+
+4. peek() takes a look at the top of the stack _without_ popping an element
+   from it.
 
 
 vim: tw=78 nocindent:
