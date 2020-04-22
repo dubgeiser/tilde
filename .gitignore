@@ -24,6 +24,7 @@ default-soapui-workspace.xml
 /.dropbox-master/
 /.dropbox/
 /.drush/
+/.eclipse/
 /.filezilla/
 /.freemind/
 /.gem/
