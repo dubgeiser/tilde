@@ -33,7 +33,8 @@
     dc = diff --cached
     info = "!echo && git remote -v && echo && git branch -a"
     l = !git --no-pager log -10 --pretty=shortnsweet
-    ll = log --pretty=shortnsweet --graph
+    ll = !git --no-pager log -20 --pretty=shortnsweet
+    lll = log --pretty=shortnsweet --graph
     lostcommits = "!git fsck | grep commit | cut -d' ' -f3 | while read hash; do git rev-parse --verify --quiet $hash^2 && echo $hash; done | xargs git show"
     pullff = pull --ff-only
     s = status --short --branch
