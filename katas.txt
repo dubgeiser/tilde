@@ -80,4 +80,20 @@ in less than 30 minutes.
    from it.
 
 
+==============================================================================
+                            Conway's game of life
+==============================================================================
+
+On an infinitely large board of XY cells:
+
+1. Cells with 0 or 1 neighbours die of loneliness.
+
+2. Cells with 2 or 3 neighbours survive.
+
+3. Cells with 4 or more neighbours die of overcrowding.
+
+4. Cells with exactly 3 neighbours come back to life..
+
+
+
 vim: tw=78 nocindent:
