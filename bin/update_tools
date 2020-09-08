@@ -13,7 +13,7 @@ brew_check_for_updates() {
     echo
     echo cask
     echo '----'
-    brew cask outdated --greedy
+    brew outdated --cask --greedy
 }
 
 
