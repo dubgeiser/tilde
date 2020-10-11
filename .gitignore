@@ -19,6 +19,7 @@ default-soapui-workspace.xml
 /.cache/
 /.composer/
 /.config/
+!/.config/nvim
 /.cups/
 /.docker/
 /.dropbox-master/
