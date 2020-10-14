@@ -89,6 +89,7 @@ default-soapui-workspace.xml
 /Virtual Box Images/
 /VirtualBox VMs/
 
+/com.googlecode.iterm2.plist
 /bin/drush
 /etc/
 /node_modules/
