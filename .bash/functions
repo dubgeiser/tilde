@@ -161,7 +161,7 @@ tpl() {
     # replacing every '/' with '\/' to not trip up sed because of the slashes
     # in the file name.
     # See: https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Shell-Parameter-Expansion
-    filename=$(find "$DIR_TEMPLATES" -type f | $SED -e "s/${DIR_TEMPLATES//\//\\/}\///"| $FZF_PREVIEW 'head -30 {}')
+    filename=$(find "$DIR_TEMPLATES" -type f | $SED -e "s/${DIR_TEMPLATES//\//\\/}\///"| $FZF_PREVIEW "head -30 $DIR_TEMPLATES/{}")
     if [[ "$filename" != "" ]]
     then
         cp "$DIR_TEMPLATES/$filename" ./
