@@ -38,7 +38,7 @@
     lostcommits = "!git fsck | grep commit | cut -d' ' -f3 | while read hash; do git rev-parse --verify --quiet $hash^2 && echo $hash; done | xargs git show"
     pullff = pull --ff-only
     s = status --short --branch
-    branchauthors = "! for branch in `git branch -r | grep -v HEAD`;do echo `git show --pretty=whowhenwhere $branch | head -n 1` \t$branch; done | sort -r"
+    branchauthors = "! for branch in `git branch -r | grep -v HEAD`;do echo `git show --color --pretty=whowhenwhere $branch | head -n 1` \t$branch; done | sort -r"
 
     # Assumes correct sorting (see the 'sort' option under the [tag] section.)
     changelog = tag -l -n1000
