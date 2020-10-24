@@ -157,10 +157,14 @@ uli() {
 #
 tpl() {
     local filename
-    filename=$(find "$DIR_TEMPLATES" -type f | $FZF_PREVIEW 'head -30 {}')
+    # The slash fest after $DIR_TEMPLATES is Shell Parameter Expansion with
+    # replacing every '/' with '\/' to not trip up sed because of the slashes
+    # in the file name.
+    # See: https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Shell-Parameter-Expansion
+    filename=$(find "$DIR_TEMPLATES" -type f | $SED -e "s/${DIR_TEMPLATES//\//\\/}\///"| $FZF_PREVIEW 'head -30 {}')
     if [[ "$filename" != "" ]]
     then
-        cp "$filename" ./
+        cp "$DIR_TEMPLATES/$filename" ./
     fi
 }
 
