@@ -24,7 +24,6 @@ alias daystill="python -c 'from datetime import date; print \"Nog %sX slapen.\" 
 
 alias t=tmux_attach
 alias w=goto_project
-alias e=nvim
 alias vim=nvim
 
 # Generate ctags file for Vim in a Drupal 7 project.
