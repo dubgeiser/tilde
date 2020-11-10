@@ -43,3 +43,7 @@ export SED=$(command -v gsed) || $(command -v sed)
 export FZF_PREVIEW='fzf-tmux --preview-window right:60% --preview'
 
 export LANG="en_US.UTF-8"
+
+# If cowsay is installed, Ansible will use it by default.
+# Although fun, it does not make up for the loss in screen space.
+export ANSIBLE_NOCOWS=1
