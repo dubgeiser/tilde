@@ -141,14 +141,15 @@ ssh_drush() {
 
 #
 # Shortcut for executing a `drush uli` on a server.
-# uses ssh_drush()
+# uses ssh_drush() and pipes the output to the clipboard so it can be pasted
+# directly in the location bar, or a secure chat, etc...
 #
 # @param The SSH identifier (as exported by Domainator).
 #
 uli() {
     local sshidentifier=$1
 
-    ssh_drush "$sshidentifier" uli
+    ssh_drush "$sshidentifier" uli | $SED -e 's/http:\/\/default//' | tr -d '\n' | pbcopy
 }
 
 #
