@@ -8,6 +8,7 @@
 . ~/.bash/functions
 . ~/.bash/aliases
 . ~/.bash/completions
-. ~/.bash/prompt
+# . ~/.bash/prompt
+eval "$(starship init bash)"
 . ~/.bashrc_private
 . ~/Library/Preferences/org.dystroy.broot/launcher/bash/br
