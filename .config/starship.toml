@@ -1,0 +1,11 @@
+# Simple format, for repositories that take more than half a second or so to
+# Git status.
+# format = "$directory$line_break$character"
+
+[character]
+success_symbol = "[➜](bold cyan)"
+error_symbol = "[✗](bold red)"
+
+[status]
+disabled = false
+format = "[$status](bold red) "
