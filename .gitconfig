@@ -5,9 +5,6 @@
     whitespace = tab-in-indent diff --check,tab-in-indent
     attributesfile = ~/.gitattributes
 
-[include]
-    path = .gitconfig-user
-
 [pretty]
     shortnsweet = %C(green)%h%C(blue)%d%C(reset) %s  %C(yellow)%an%C(reset), %cr
     whowhenwhere = %C(yellow) %cn %>|(40) %C(reset) %ar %>|(80) %C(blue)
@@ -75,3 +72,7 @@
 
 [difftool]
     prompt = false
+
+[user]
+    useConfigOnly = true
+    name = Per Juchtmans
