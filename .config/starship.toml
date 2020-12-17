@@ -2,6 +2,8 @@
 # Git status.
 # format = "$directory$line_break$character"
 
+add_newline = false
+
 [character]
 success_symbol = "[➜](bold cyan)"
 error_symbol = ""
