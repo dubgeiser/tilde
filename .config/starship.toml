@@ -4,8 +4,9 @@
 
 [character]
 success_symbol = "[➜](bold cyan)"
-error_symbol = "[✗](bold red)"
+error_symbol = ""
 
 [status]
 disabled = false
-format = "[$status](bold red) "
+symbol = "✗"
+format = "[$symbol $status](bold red)"
