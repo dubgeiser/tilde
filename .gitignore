@@ -21,6 +21,7 @@ default-soapui-workspace.xml
 /.composer/
 /.config/configstore/
 /.config/filezilla/
+/.config/htop/
 /.cups/
 /.docker/
 /.dropbox-master/
