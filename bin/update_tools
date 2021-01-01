@@ -23,13 +23,6 @@ composer_update() {
 }
 
 
-vim_update() {
-    print_start_tool_update "Vim"
-    cd "$HOME"/.vim/ || print_error_and_exit 'CANNOT CD TO VIM DIRECTORY'
-    ./update
-}
-
-
 print_error_and_exit() {
     local message=$1
     echo
@@ -61,6 +54,5 @@ print_start_tool_update() {
 
 pushd "$(pwd)" || print_error_and_exit 'CANNOT PUSH WORKING DIR TO THE DIRSTACK'
 composer_update
-vim_update
 brew_check_for_updates
 popd || print_error_and_exit 'CANNOT POP FROM DIRSTACK'
