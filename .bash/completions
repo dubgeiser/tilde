@@ -11,7 +11,7 @@
 # But completion can be configured for that alias, for example:
 # Supposing `alias g=git` one can do:
 #
-#   complete -o default -o nospace -F _git g
+#   complete -o default -o nospace -F __git_wrap__git_main g
 #
 
 
@@ -24,8 +24,6 @@ ssh_load_autocomplete() {
 }
 
 
-complete -o default -o nospace -F _git g
-
 homebrew_completions=/usr/local/etc/bash_completion.d
 for each in $(ls $homebrew_completions); do
     # These are symlinks, so the "@" is removed.
@@ -36,6 +34,8 @@ for each in $(ls $homebrew_completions); do
         source "$homebrew_completions/$fn"
     fi
 done
+
+complete -o default -o nospace -F __git_wrap__git_main g
 
 # FZF
 # TODO split up? (because it does more than completion)
