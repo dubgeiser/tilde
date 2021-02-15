@@ -2,6 +2,7 @@
 .build/
 .buildpath
 .cache
+.env
 .idea
 .project
 .settings
