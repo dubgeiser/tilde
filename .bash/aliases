@@ -20,7 +20,7 @@ alias ym='~/bin/ym $(aws ls -1 yermama | fzf) | pbcopy'
 
 # TODO days => hours [=> minutes [=> seconds]]
 # TODO configurable dates?
-alias daystill="python -c 'from datetime import date; print \"Nog %sX slapen.\" % (date(2020,3,14) - date.today()).days'"
+alias daystill="python -c 'from datetime import date; print \"Nog %sX slapen.\" % (date(2021,3,14) - date.today()).days'"
 
 alias t=tmux_attach
 alias w=goto_project
