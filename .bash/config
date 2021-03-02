@@ -15,8 +15,13 @@ export GIT_EDITOR="$EDITOR"
 # More common command history, trying not to have duplicates.
 export HISTCONTROL=ignoreboth
 shopt -s histappend
+
+# Keep a lot of history
 export HISTFILESIZE=10000000
 export HISTSIZE=1000000
+
+# Track when which command was executed
+export HISTTIMEFORMAT="%Y-%m-%d %T"
 
 export LIQUIBASE_HOME=/usr/local/opt/liquibase/libexec
 
