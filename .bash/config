@@ -21,7 +21,7 @@ export HISTFILESIZE=10000000
 export HISTSIZE=1000000
 
 # Track when which command was executed
-export HISTTIMEFORMAT="%Y-%m-%d %T"
+export HISTTIMEFORMAT="%Y-%m-%d %T "
 
 export LIQUIBASE_HOME=/usr/local/opt/liquibase/libexec
 
