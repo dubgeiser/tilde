@@ -19,6 +19,7 @@ default-soapui-workspace.xml
 /.bundle/
 /.cache/
 /.composer/
+/.config/coc/
 /.config/configstore/
 /.config/filezilla/
 /.config/htop/
