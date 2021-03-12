@@ -23,7 +23,6 @@ default-soapui-workspace.xml
 /.config/configstore/
 /.config/filezilla/
 /.config/htop/
-/.config/iterm2/
 /.cups/
 /.docker/
 /.dropbox-master/
