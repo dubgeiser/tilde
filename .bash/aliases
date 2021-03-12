@@ -26,10 +26,6 @@ alias t=tmux_attach
 alias w=goto_project
 alias vim=nvim
 
-# Most servers I ssh into don't have the xterm-kitty terminfo files.
-# kitten ssh behaves like ssh but copies over the terminfo files.
-alias pussy='kitty +kitten ssh'
-
 # Generate ctags file for Vim in a Drupal 7 project.
 # For Drupal 8 and other PHP project using composer (and Git), PHPhactor works
 # just fine.

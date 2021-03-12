@@ -181,3 +181,13 @@ g() {
         git s
     fi
 }
+
+#
+# `pussy` assumes that the previous command was an ssh <sshidentifier> command
+# and takes that identifier and redoes the ssh command.
+# Most servers I ssh into don't have the xterm-kitty terminfo files.
+# kitten ssh behaves like ssh but copies over the terminfo files.
+#
+pussy() {
+    kitty +kitten ssh $_
+}
