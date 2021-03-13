@@ -8,7 +8,7 @@
 #
 # Path and environment vars.
 #
-export PATH="/usr/local/php5/bin:$HOME/bin:$HOME/.composer/vendor/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/opt/sqlite/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.composer/vendor/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/opt/sqlite/bin:$PATH"
 export EDITOR=nvim
 export GIT_EDITOR="$EDITOR"
 
