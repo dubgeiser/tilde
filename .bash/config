@@ -6,9 +6,18 @@
 #
 
 #
-# Path and environment vars.
+# Path, keep at 1 line per added directory.
+# This makes it more readable and easier to edit later.
 #
-export PATH="$HOME/bin:$HOME/.composer/vendor/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/opt/sqlite/bin:$PATH"
+PATH="/usr/local/mysql/bin:$PATH"
+PATH="/usr/local/opt/sqlite/bin:$PATH"
+PATH="/Volumes/webdev/www/_apache/bin:$PATH"
+PATH="/usr/local/sbin:$PATH"
+PATH="/usr/local/bin:$PATH"
+PATH="$HOME/.composer/vendor/bin:$PATH"
+PATH="$HOME/bin:$PATH"
+export PATH
+
 export EDITOR=nvim
 export GIT_EDITOR="$EDITOR"
 
