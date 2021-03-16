@@ -30,3 +30,5 @@ alias vim=nvim
 # For Drupal 8 and other PHP project using composer (and Git), PHPhactor works
 # just fine.
 alias generate_tags='ctags --langmap=php:.engine.inc.module.theme.install.php --php-kinds=cdfi --languages=php --recurse --fields=+l'
+
+alias icat="kitty +kitten icat"
