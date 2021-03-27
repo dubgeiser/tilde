@@ -46,6 +46,10 @@ export DIR_PROJECTS=$HOME/Projects
 # No trailing slash!
 export DIR_TEMPLATES=$HOME/templates
 
+# Where are the Python virtualenvs located?
+# No trailing slash!
+export DIR_VIRTUALENVS=$HOME/venv
+
 #
 # Which commands.
 #

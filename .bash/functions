@@ -99,16 +99,27 @@ ssh_user() {
 # Change to a project directory quickly.
 # If no argument was given, use FZF to select one.
 #
-goto_project() {
+project_goto() {
     local project=$1
     if [[ "$project" == "" ]]
     then
         project=$(find "$DIR_PROJECTS" -type d -maxdepth 1 | cut -d/ -f5 | $FZF_PREVIEW "ls $DIR_PROJECTS/{}")
     fi
-    if [[ "$project" != "" ]]
+    if [[ "$project" == "" ]] || [[ ! -d "$DIR_PROJECTS"/"$project" ]]
     then
-        cd "$DIR_PROJECTS"/"$project" || return
+        echo "Project not found in [$DIR_PROJECTS]"
+        return 1
     fi
+    cd "$DIR_PROJECTS"/"$project" || return 1
+    if type "deactivate" > /dev/null 2>&1
+    then
+        deactivate
+    fi
+    if [[ -d "$DIR_VIRTUALENVS"/"$project" ]]
+    then
+        . "$DIR_VIRTUALENVS"/"$project"/bin/activate
+    fi
+    return 0
 }
 
 
