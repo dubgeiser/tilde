@@ -96,11 +96,15 @@ ssh_user() {
 
 
 #
-# Change to a project directory quickly, using FZF.
+# Change to a project directory quickly.
+# If no argument was given, use FZF to select one.
 #
 goto_project() {
-    local project
-    project=$(find "$DIR_PROJECTS" -type d -maxdepth 1 | cut -d/ -f5 | $FZF_PREVIEW "ls $DIR_PROJECTS/{}")
+    local project=$1
+    if [[ "$project" == "" ]]
+    then
+        project=$(find "$DIR_PROJECTS" -type d -maxdepth 1 | cut -d/ -f5 | $FZF_PREVIEW "ls $DIR_PROJECTS/{}")
+    fi
     if [[ "$project" != "" ]]
     then
         cd "$DIR_PROJECTS"/"$project" || return
