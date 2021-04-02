@@ -23,6 +23,7 @@ alias ym='~/bin/ym $(aws ls -1 yermama | fzf) | pbcopy'
 alias daystill="python -c 'from datetime import date; print \"Nog %sX slapen.\" % (date(2021,3,14) - date.today()).days'"
 
 alias t=tmux_attach
+alias v="cd $HOME/.config/nvim"
 alias w=project_goto
 alias vim=nvim
 
