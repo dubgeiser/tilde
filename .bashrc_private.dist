@@ -5,3 +5,6 @@ SLACK_USER=username
 SLACK_CHANNEL='SLACKCHANNEL'
 
 alias slackmessage="~/bin/slackmessage -h $SLACK_URL_HOOK -u $SLACK_USER -c $SLACK_CHANNEL"
+
+export DOMAINATOR_URL='https://www.example.com'
+export DOMAINATOR_USER='user@example.com'

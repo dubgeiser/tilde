@@ -16,15 +16,16 @@ import requests
 def login_accepted(response):
     return not (ff_username in response.text or ff_password in response.text)
 
+url = os.environ['DOMAINATOR_URL']
 
 # Url of the login form
-url_login = "https://domainator.gentgrp.gent.be/login"
+url_login = f"{url}/login"
 
 # Url of the SSH config (as download).
-url_ssh_config = "https://domainator.gentgrp.gent.be/export/ssh-config/download"
+url_ssh_config = f"{url}/export/ssh-config/download"
 
 # The default user name.
-username_default = "per.juchtmans@digipolis.gent"
+username_default = os.environ['DOMAINATOR_USER']
 
 # Where to store the SSH config when fetched
 fn_ssh_config = os.path.join(os.environ["HOME"], ".ssh/digipolis-hosts")
