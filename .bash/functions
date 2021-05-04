@@ -144,7 +144,7 @@ ssh_drush() {
         # Strip out '-' because this is also done to the appname on the server.
         # Ex: 'this-app.prod' will reside under '~/apps/thisapp/current' on the
         # production server.
-        appname=$(echo "$sshidentifier" | $SED -E 's/\.(test|qa|prod)//' | $SED -E 's/-//')
+        appname=$(echo "$sshidentifier" | $SED -E 's/\.(dv|qa|prod)//' | $SED -E 's/-//')
 
         # The name of an application is max 14 chars.
         appname=${appname:0:14}
