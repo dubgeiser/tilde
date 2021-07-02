@@ -206,3 +206,10 @@ g() {
 pussy() {
     kitty +kitten ssh $_
 }
+
+#
+# Find the current active street on the SG website
+#
+activestreet() {
+    ssh stadgent.prod "echo \$(cat \$(grep /etc/apache2/sites-enabled/stadgent_* -e 'ServerAlias stad.gent' | cut -d':' -f1) | grep -oP 'DocumentRoot\s*/\S+' | cut -d' ' -f2 | cut -d'/' -f5 | sed -e 's/stadgent//')"
+}
